@@ -130,6 +130,10 @@
   font-family: "Inter", serif;
 }
 
+html {
+  background-color: black;
+}
+
 body {
   background-color: black;
 }
@@ -308,16 +312,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: linear-gradient(180deg, #85c1a3 0%, rgb(42, 157, 143) 100%);
   opacity: 1;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
