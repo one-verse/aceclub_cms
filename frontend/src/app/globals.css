@@ -130,6 +130,10 @@
   font-family: "Inter", serif;
 }
 
+body {
+  background-color: black;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
