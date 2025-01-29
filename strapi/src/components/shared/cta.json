@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_ctas",
+  "info": {
+    "displayName": "CTA",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "text"
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "_self",
+        "_blank",
+        "_top",
+        "_parent"
+      ]
+    }
+  }
+}

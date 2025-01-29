@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_dynamic_zone_categories_grids",
+  "info": {
+    "displayName": "CategoriesGrid",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "text"
+    },
+    "sectionDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

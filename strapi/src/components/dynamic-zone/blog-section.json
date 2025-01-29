@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dynamic_zone_blog_sections",
+  "info": {
+    "displayName": "BlogSection",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_dynamic_zone_faq_sections",
+  "info": {
+    "displayName": "FAQSection",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "text"
+    },
+    "question_answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question-answer.question-answer"
+    }
+  }
+}

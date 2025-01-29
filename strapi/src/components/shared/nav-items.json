@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_nav_items",
+  "info": {
+    "displayName": "NavItems",
+    "icon": "exit",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
+    },
+    "NavRHS": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta"
+    }
+  }
+}

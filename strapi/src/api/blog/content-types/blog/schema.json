@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "DynamicZone": {
+      "type": "dynamiczone",
+      "components": [
+        "dynamic-zone.mega-section",
+        "dynamic-zone.content-block",
+        "dynamic-zone.categories-grid",
+        "dynamic-zone.carousel",
+        "dynamic-zone.traits-grid"
+      ]
+    },
+    "minsToRead": {
+      "type": "integer"
+    }
+  }
+}

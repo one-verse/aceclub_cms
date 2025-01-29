@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_dynamic_zone_carousels",
+  "info": {
+    "displayName": "carousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.slide"
+    }
+  }
+}

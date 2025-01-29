@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dynamic_zone_content_blocks",
+  "info": {
+    "displayName": "ContentBlock",
+    "icon": "paint"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

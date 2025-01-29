@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_answers",
+  "info": {
+    "singularName": "question-answer",
+    "pluralName": "question-answers",
+    "displayName": "QuestionAnswer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

@@ -8,9 +8,11 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "seed": "strapi import -f ./data/20250129_11_20.tar"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^5.0.1",
     "@strapi/plugin-cloud": "5.8.0",
     "@strapi/plugin-users-permissions": "5.8.0",
     "@strapi/strapi": "5.8.0",
