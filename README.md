@@ -28,3 +28,5 @@
   - IMAGE_HOSTNAME (only the domain of backend e.g.cmsonetrade.thespartanpoker.in ) with no protocol
   - SITE_URL
   - NEXT_PUBLIC_STRAPI_IMAGE_API_URL (domain of backend with protocol)
+- commands :
+  - `npm run build -- --no-lint --experimental-build-mode compile && npm start`
