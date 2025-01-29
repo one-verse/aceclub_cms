@@ -21,7 +21,7 @@ export default function Footer({ FooterNavItems }: { FooterNavItems: any }) {
         </div>
 
         {/* Links */}
-        <div className="flex flex-col justify-start space-y-3 text-sm text-gray-400 md:flex-row md:justify-center md:space-x-6">
+        <div className="flex flex-col justify-start space-y-3 text-sm text-gray-400 md:flex-row md:justify-center md:space-x-6 md:space-y-0">
           {FooterNavItems.map(
             (
               ele: { link: string; target: string; title: string },
