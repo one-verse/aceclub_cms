@@ -22,12 +22,15 @@ export const MegaSection = (props: MegaSectionType) => {
       >
         <div className={clsx(!props.RHSImage ? "md:w-11/12" : "basis-1/2")}>
           {props.title && (
-            <p className="poppins-medium mb-6 text-left text-3xl font-semibold leading-tight md:text-5xl">
+            <p className="poppins-medium mb-6 text-left text-3xl font-semibold leading-tight text-white md:text-5xl">
               {props.title}
             </p>
           )}
           {props.description && (
-            <div dangerouslySetInnerHTML={{ __html: props.description }}></div>
+            <div
+              className="text-white"
+              dangerouslySetInnerHTML={{ __html: props.description }}
+            ></div>
           )}
         </div>
         {props.RHSImage && (
