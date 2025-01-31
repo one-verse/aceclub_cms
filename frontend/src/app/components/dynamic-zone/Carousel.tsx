@@ -25,7 +25,7 @@ export const Carousel = (props: any) => {
             loop={true}
             centeredSlides={true}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }} // Ensure this line is correct
+            autoplay={{ delay: 8000, disableOnInteraction: false }} // Ensure this line is correct
           >
             {props.slides.map((slide: any, slideIndex: number) => {
               return (
@@ -40,6 +40,8 @@ export const Carousel = (props: any) => {
                     <GreenBtn
                       title="Signup & Trade Live!"
                       url={"https://exchange.onetrade.live"}
+                      target="_blank"
+            rel="noopener noreferrer"
                     />
                   </div>
                   <picture>

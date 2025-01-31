@@ -12,7 +12,7 @@ export const CategoriesGrid = (props: any) => {
   };
 
   return (
-    <section className="container mx-auto max-w-[1200px] px-4 py-10 text-white md:py-20">
+    <section id="categories" className="container mx-auto max-w-[1200px] px-4 py-10 text-white md:py-20">
       {/* Header */}
       <div className="mb-10 text-center md:mb-20">
         <h2 className="poppins-regular text-2xl md:text-5xl">
