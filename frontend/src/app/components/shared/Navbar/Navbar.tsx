@@ -23,7 +23,7 @@ const Navbar = ({
     <header className="h-full w-full inter-normal p-2 md:px-20 sticky top-0 z-40">
       <nav className="flex w-full items-center space-x-4">
         <div className="navbar-brand mx-auto md:ms-0 md:me-auto">
-          <Link href="/">
+          <Link href="https://exchange.onetrade.live">
             <Image
               width={260}
               height={60}
