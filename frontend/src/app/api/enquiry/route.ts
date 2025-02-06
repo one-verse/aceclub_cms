@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const forStrapi = await request.json();
-    const response = await strapiCall.post("/api/enquiries", {
+    const response = await strapiCall.post("/enquiries", {
       headers: { "Content-Type": "application/json" },
       data: forStrapi,
     });
