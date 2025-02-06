@@ -9,7 +9,7 @@ export const BlogSection = (props: any) => {
     <div className="container mx-auto max-w-[1200px] px-2 py-16 text-white">
       <div className="mx-auto max-w-5xl">
         <p className="poppins-medium text-light-gray mb-12 text-center text-2xl md:text-5xl">
-          Knowledge & Trends
+          Knowledge and Trends
         </p>
         <div className="grid grid-cols-2 md:gap-8">
           {props.blogs.map((blog: any, index: number) => (

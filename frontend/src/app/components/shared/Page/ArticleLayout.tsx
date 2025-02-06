@@ -25,7 +25,7 @@ export async function ArticleLayout({ data }: { data: any }) {
           {format(new Date(data.publishedAt), "MMMM dd, yyyy")}
         </p>
       </div>
-      <div className="page-body my-6">
+      <div className="page-body text-white my-6">
         {data?.DynamicZone && (
           <DynamicZoneManager dynamicZone={data?.DynamicZone} />
         )}
