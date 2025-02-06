@@ -25,6 +25,10 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "link": {
+      "type": "string",
+      "target": "api::link.link"
     }
   }
 }
