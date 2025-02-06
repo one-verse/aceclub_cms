@@ -15,10 +15,7 @@
       "type": "string"
     },
     "link": {
-      "type": "string",
-      "required": false,
-      "default": "https://exchange.onetrade.live/category/all",
-      "customField": "url"
+      "type": "string"
     }
   }
 }

@@ -48,15 +48,18 @@ export const CategoriesGrid = (props: any) => {
 
       {/* Filters */}
       <div className="mx-auto mt-10 flex flex-wrap justify-center gap-2 px-4 md:w-3/4 md:gap-6">
-        {props.tags.map((filter: any, index: number) => (
-          <a
-            key={index}
-            className="text-muted p-2 pl-12 text-base filter md:py-5 md:text-xl"
-          >
-            {filter.name}
-          </a>
-        ))}
-      </div>
+  {props.tags.map((filter: any, index: number) => (
+    <a
+      key={index}
+      href={filter.link || "https://exchange.onetrade.live/category/all"} // Ensure a default value if `link` is missing
+      target="_blank" // Opens in a new tab
+      rel="noopener noreferrer" // Security best practice
+      className="text-muted p-2 pl-12 text-base filter md:py-5 md:text-xl"
+    >
+      {filter.name}
+    </a>
+  ))}
+</div>
     </section>
   );
 };
