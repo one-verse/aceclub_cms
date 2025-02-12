@@ -10,7 +10,7 @@ export const TraitsGrid = (props: any) => {
     >
       {/* Header */}
       <div className="mb-10 text-center">
-        <h2 className="poppins-medium text-2xl md:text-5xl">
+        <h2 className="font-sans text-2xl md:text-5xl">
           {props.sectionTitle || ""}
         </h2>
         {props.sectionDescription && (
