@@ -26,34 +26,41 @@ export const CategoriesGrid = (props: any) => {
       {/* Categories */}
       {/* <div className="my-5 grid grid-cols-1 gap-x-2 gap-y-20 md:grid-cols-2 lg:grid-cols-4"> */}
       <div className="my-5 flex flex-row flex-wrap content-start items-end justify-center space-y-4 md:space-y-10">
-        {props.categories.map((category: any, index: number) => (
-          <div key={index} className="tag-card-wrapper p-1 md:basis-1/4">
-            <div className="tag-card column flex h-full w-full items-end">
-              <Image
-                width={300}
-                height={400}
-                src={strapiImage(category.image.url)}
-                alt={category.name}
-                className="tag-img"
-              />
-              <div className="tag-card-footer p-4 text-center">
-                <p className="poppins-bold text-xl font-semibold text-white md:text-3xl">
-                  {category.name}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
+  {props.categories.map((category: any, index: number) => (
+    <a
+      key={index}
+      href={category.link || "https://exchange.onetrade.live/category/all"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="tag-card-wrapper p-1 md:basis-1/4 block"
+    >
+      <div className="tag-card column flex h-full w-full items-end">
+        <Image
+          width={300}
+          height={400}
+          src={strapiImage(category.image.url)}
+          alt={category.name}
+          className="tag-img"
+        />
+        <div className="tag-card-footer p-4 text-center">
+          <p className="poppins-bold text-xl font-semibold text-white md:text-3xl">
+            {category.name}
+          </p>
+        </div>
       </div>
+    </a>
+  ))}
+</div>
+
 
       {/* Filters */}
       <div className="mx-auto mt-10 flex flex-wrap justify-center gap-2 px-4 md:w-3/4 md:gap-6">
   {props.tags.map((filter: any, index: number) => (
     <a
       key={index}
-      href={filter.link || "https://exchange.onetrade.live/category/all"} // Ensure a default value if `link` is missing
-      target="_blank" // Opens in a new tab
-      rel="noopener noreferrer" // Security best practice
+      href={filter.link || "https://exchange.onetrade.live/category/all"} 
+      target="_blank" 
+      rel="noopener noreferrer" 
       className="text-muted p-2 pl-12 text-base filter md:py-5 md:text-xl"
     >
       {filter.name}

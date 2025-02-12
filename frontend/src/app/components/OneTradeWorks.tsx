@@ -43,7 +43,7 @@ export default function OneTradeWorks() {
     <section className="text-white bg-black bg-neutral-900 py-12">
       {/* Header */}
       <div className="text-center mb-10">
-        <h2 className="text-5xl poppins-medium">How OneTrade Works</h2>
+        <h2 className="text-5xl font-sans">How OneTrade Works</h2>
         <p className="text-muted mt-4 max-w-3xl mx-auto">
           Discover the key features that make OneTrade the ultimate platform for
           opinion trading, where strategy meets opportunity!

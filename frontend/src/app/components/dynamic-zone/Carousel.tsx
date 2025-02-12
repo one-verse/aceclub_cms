@@ -31,7 +31,7 @@ export const Carousel = (props: any) => {
               return (
                 <SwiperSlide key={slideIndex}>
                   <div className="swiper-caption column absolute flex content-start space-y-4 p-4 md:content-center md:space-y-6 md:ps-20">
-                    <p className="text-light-gray poppins-medium mb-4 text-3xl leading-tight md:text-6xl">
+                    <p className="text-light-gray font-sans mb-4 text-3xl leading-tight md:text-6xl">
                       {slide.title}
                     </p>
                     <div className="text-muted inter-normal text-base md:text-3xl">

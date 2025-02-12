@@ -8,7 +8,7 @@ const OpinionSection = () => {
     >
       <div className="container max-w-[1200px] mx-auto px-6">
         <div className="text-center md:w-11/12">
-          <h2 className="text-5xl font-semibold leading-tight mb-6 poppins-medium text-left ">
+          <h2 className="text-5xl font-semibold leading-tight mb-6 font-sans text-left ">
             Turn your opinions into action. Trade on predictions in sports,
             entertainment, finance, and more. Stay sharp, spot opportunities,
             and earn rewards for your foresight.
