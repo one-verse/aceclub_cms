@@ -60,7 +60,7 @@ export default function OneTradeWorks() {
                 alt={feature.title}
                 className="max-w-full h-auto block mr-auto"
               />
-              <p className="text-3xl poppins-regular text-light-gray mb-3">
+              <p className="text-3xl arial-regular text-light-gray mb-3">
                 {feature.title}
               </p>
             </div>

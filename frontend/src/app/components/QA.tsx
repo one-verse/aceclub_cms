@@ -43,7 +43,7 @@ export default function QA() {
 
   return (
     <div className="bg-black text-white py-16 px-4">
-      <p className="text-6xl text-center mb-12 poppins-regular">
+      <p className="text-6xl text-center mb-12 arial-regular">
         We’ve got the answers
       </p>
       <div className="container max-w-[1200px] mx-auto">
