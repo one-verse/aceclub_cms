@@ -31,7 +31,7 @@ export default function ExploreSection() {
     <section className="container max-w-[1200px] mx-auto text-white py-20">
       {/* Header */}
       <div className="text-center mb-20">
-        <h2 className="text-5xl poppins-regular">
+        <h2 className="text-5xl arial-regular">
           Explore Our Top Trading Categories
         </h2>
         <p className="text-muted text-lg my-5">
@@ -52,7 +52,7 @@ export default function ExploreSection() {
                 className="tag-img"
               />
               <div className="p-4 text-center tag-card-footer">
-                <p className="text-3xl font-semibold poppins-bold text-white">
+                <p className="text-3xl font-semibold arial-bold text-white">
                   {category.title}
                 </p>
               </div>

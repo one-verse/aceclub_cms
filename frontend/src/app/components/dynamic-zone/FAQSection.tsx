@@ -10,7 +10,7 @@ export const FAQSection = (props: any) => {
   return (
     <section id="faq">
       <div className="bg-black text-white py-16 px-4">
-        <p className="text-2xl md:text-6xl text-center mb-12 poppins-regular">
+        <p className="text-2xl md:text-6xl text-center mb-12 arial-regular">
           {props.sectionTitle}
         </p>
         <div className="container max-w-[1200px] mx-auto">

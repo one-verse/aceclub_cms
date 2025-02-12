@@ -15,7 +15,7 @@ export const CategoriesGrid = (props: any) => {
     <section id="categories" className="container mx-auto max-w-[1200px] px-4 py-10 text-white md:py-20">
       {/* Header */}
       <div className="mb-10 text-center md:mb-20">
-        <h2 className="poppins-regular text-2xl md:text-5xl">
+        <h2 className="arial-regular text-2xl md:text-5xl">
           {props.sectionTitle}
         </h2>
         <div className="text-muted my-5 text-lg">
@@ -43,7 +43,7 @@ export const CategoriesGrid = (props: any) => {
           className="tag-img"
         />
         <div className="tag-card-footer p-4 text-center">
-          <p className="poppins-bold text-xl font-semibold text-white md:text-3xl">
+          <p className="arial-bold text-xl font-semibold text-white md:text-3xl">
             {category.name}
           </p>
         </div>

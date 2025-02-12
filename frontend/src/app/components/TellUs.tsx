@@ -4,7 +4,7 @@ export default function TellUs() {
     <section className="variant-green">
       <div className="container max-w-[1200px] mx-auto flex content-center items-center p-4 w-full mx-auto space-x-12">
         <div className="text-left basis-1/2">
-          <p className="text-7xl poppins-bold">
+          <p className="text-7xl arial-bold">
             Your voice matters and Onetrade rewards it.
           </p>
           <p className="text-xl text-white my-3 inter-normal">

@@ -37,7 +37,7 @@ export const TraitsGrid = (props: any) => {
               />
             </div>
             <div className="work-card-body basis-full">
-              <p className="poppins-regular text-light-gray mb-1 text-base md:mb-3 md:text-3xl">
+              <p className="arial-regular text-light-gray mb-1 text-base md:mb-3 md:text-3xl">
                 {feature.title}
               </p>
               <div className="text-muted inter-normal text-sm leading-normal md:w-5/6 md:text-xl">
