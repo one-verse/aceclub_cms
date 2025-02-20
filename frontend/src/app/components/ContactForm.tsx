@@ -136,11 +136,10 @@ export default function ContactForm() {
     <div className="bg-black bg-neutral-900 px-4 py-16 text-white">
       <div className="contact-form-inner-wrapper border-radius-primary mx-auto bg-black p-2 md:max-w-4xl md:p-6">
         <h2 className="font-sans text-light-gray mb-4 text-center text-2xl md:text-5xl">
-          Have Questions?
+          Got questions?
         </h2>
         <p className="text-muted mb-6 text-center text-base md:text-2xl">
-          Reach out to our Support Team, and we’ll address your queries
-          promptly!
+        We’re right here for you. Reach out and our support team will help you promptly! 
         </p>
         <form onSubmit={handleSubmit(processForm)} className="mx-auto md:w-2/3">
           {afVisible ? (
