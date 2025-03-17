@@ -35,7 +35,7 @@ export const BlogSection = (props: any) => {
                       {blog.createdAt ? format(blog.createdAt, "do MMM y") : ""}
                     </span>
                   </div>
-                  <h3 className="inter-normal text-light-gray mb-3 text-4xl text-sm">
+                  <h3 className="poppins-normal text-light-gray mb-3 text-4xl text-sm">
                     {blog.title}
                   </h3>
                   <p className="text-muted text-xs">{blog.excerpt}</p>
