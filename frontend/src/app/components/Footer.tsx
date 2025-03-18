@@ -28,7 +28,7 @@ export default function Footer({ FooterNavItems }: { FooterNavItems: any }) {
               ind: number
             ) => (
               <Link
-                className="text-muted inter-normal"
+                className="text-muted poppins-normal"
                 key={ind}
                 href={ele.link}
                 target={ele.target}

@@ -7,7 +7,7 @@ export default function TellUs() {
           <p className="text-7xl arial-bold">
             Your voice matters and Onetrade rewards it.
           </p>
-          <p className="text-xl text-white my-3 inter-normal">
+          <p className="text-xl text-white my-3 poppins-normal">
             Share your predictions on sports, politics, and entertainment to
             turn your ideas into earnings. Be smart, stay ahead, and get
             rewarded for being right.

@@ -54,10 +54,10 @@ export default function QA() {
               className={`faq p-5 ${activeIndex === index ? "active" : ""}`}
             >
               <div
-                className="flex justify-between items-center cursor-pointer inter-normal text-light-gray"
+                className="flex justify-between items-center cursor-pointer poppins-normal text-light-gray"
                 onClick={() => toggleFAQ(index)}
               >
-                <p className="text-2xl inter-semibold text-light-gray">
+                <p className="text-2xl poppins-semibold text-light-gray">
                   {faq.question}
                 </p>
                 <button

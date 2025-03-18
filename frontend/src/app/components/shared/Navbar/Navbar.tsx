@@ -20,7 +20,7 @@ const Navbar = ({
   navRHS: NavItem;
 }) => {
   return (
-    <header className="h-full w-full inter-normal p-2 md:px-20 sticky top-0 z-40">
+    <header className="h-full w-full poppins-normal p-2 md:px-20 sticky top-0 z-40">
       <nav className="flex w-full items-center space-x-4">
         <div className="navbar-brand mx-auto md:ms-0 md:me-auto">
           <Link href="https://exchange.onetrade.live">
@@ -39,7 +39,7 @@ const Navbar = ({
               {items.map((el: NavItem, ind: number) => (
                 <li key={ind}>
                   <Link
-                    className="inter-normal"
+                    className="poppins-normal"
                     target={el.target}
                     href={el.link}
                   >

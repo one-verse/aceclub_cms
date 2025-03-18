@@ -34,7 +34,7 @@ export const Carousel = (props: any) => {
                     <p className="text-light-gray font-sans mb-4 text-3xl leading-tight md:text-6xl">
                       {slide.title}
                     </p>
-                    <div className="text-muted inter-normal text-base md:text-3xl">
+                    <div className="text-muted poppins-normal text-base md:text-3xl">
                       <ContentBlock content={slide.description} />
                     </div>
                     <GreenBtn
