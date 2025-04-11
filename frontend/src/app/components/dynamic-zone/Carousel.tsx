@@ -34,39 +34,49 @@ export const Carousel = (props: any) => {
 
               return (
                 <SwiperSlide key={slideIndex}>
-                  <div className="swiper-caption column absolute flex content-start space-y-4 p-4 md:content-center md:space-y-6 md:ps-20 z-10">
-                    <p className="text-light-gray font-sans mb-4 text-3xl leading-tight md:text-6xl">
-                      {slide.title}
-                    </p>
-                    <div className="text-muted poppins-normal text-base md:text-3xl">
-                      <ContentBlock content={slide.description} />
-                    </div>
-                    <GreenBtn
-                      title="Signup & Trade Live!"
-                      url={"https://exchange.onetrade.live"}
-                      target="_blank"
-            rel="noopener noreferrer"
-                    />
-                  </div>
+  <div className="relative">
+    {/* Overlay on image */}
+    <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 md:ps-20">
+      <div className="space-y-4 md:space-y-6">
+        <p className="text-muted poppins-normal text-base md:text-3xl">
+          {slide.title}
+        </p>
+        <div className="text-muted poppins-normal text-base md:text-3xl">
+          <ContentBlock content={slide.description} />
+        </div>
+      </div>
 
-                 
-                  <a href={link} target={target} rel="noopener noreferrer">
-                    <picture>
-                      <source
-                        srcSet={strapiImage(slide.mobileImage?.url)}
-                        media="(max-width: 768px)"
-                      />
-                      <Image
-                        src={strapiImage(slide.desktopImage?.url)}
-                        alt="main_banner"
-                        width={1200}
-                        height={800}
-                        className="swiper-slide-img h-auto w-full object-cover"
-                        priority
-                      />
-                    </picture>
-                  </a>
-                </SwiperSlide>
+      {/* Button at the bottom of overlay */}
+      <div className="mt-4 md:mt-10 pb-6 md:pb-12">
+        <GreenBtn
+          title="Signup & Trade Live!"
+          url="https://exchange.onetrade.live"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+      </div>
+    </div>
+
+    {/* Image in the background */}
+    <a href={link} target={target} rel="noopener noreferrer">
+      <picture>
+        <source
+          srcSet={strapiImage(slide.mobileImage?.url)}
+          media="(max-width: 768px)"
+        />
+        <Image
+          src={strapiImage(slide.desktopImage?.url)}
+          alt="main_banner"
+          width={1200}
+          height={800}
+          className="swiper-slide-img h-auto w-full object-cover"
+          priority
+        />
+      </picture>
+    </a>
+  </div>
+</SwiperSlide>
+
               );
             })}
           </Swiper>
