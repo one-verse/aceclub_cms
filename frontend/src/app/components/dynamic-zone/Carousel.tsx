@@ -6,7 +6,7 @@ import { strapiImage } from "../../../../lib/strapi/strapiImage";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
-//import GreenBtn from "../shared/GreenBtn";
+import GreenBtn from "../shared/GreenBtn";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,12 +41,12 @@ export const Carousel = (props: any) => {
                     <div className="text-muted poppins-normal text-base md:text-3xl">
                       <ContentBlock content={slide.description} />
                     </div>
-                    {/* <GreenBtn
+                    <GreenBtn
                       title="Signup & Trade Live!"
                       url={"https://exchange.onetrade.live"}
                       target="_blank"
             rel="noopener noreferrer"
-                    /> */}
+                    />
                   </div>
 
                  
