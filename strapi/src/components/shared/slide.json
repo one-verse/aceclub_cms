@@ -9,7 +9,7 @@
   "attributes": {
     "title": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "description": {
       "type": "customField",
@@ -17,7 +17,7 @@
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor",
-      "required": true
+      "required": false
     },
     "cta": {
       "type": "component",
