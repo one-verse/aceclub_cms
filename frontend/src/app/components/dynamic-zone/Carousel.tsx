@@ -48,7 +48,7 @@ export const Carousel = (props: any) => {
       </div>
 
   {/* Button position – just above middle in mobile */}
-  <div className="mt-20 md:mt-10 pb-4 md:pb-12 self-start">
+  <div className="mt-44 md:mt-10 pb-4 md:pb-12 self-start">
     <GreenBtn
       title="Signup & Trade Live!"
       url="https://exchange.onetrade.live"
