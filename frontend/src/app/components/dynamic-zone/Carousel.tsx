@@ -36,7 +36,8 @@ export const Carousel = (props: any) => {
                 <SwiperSlide key={slideIndex}>
   <div className="relative">
     {/* Overlay on image */}
-    <div className="absolute inset-0 z-10 flex flex-col justify-between p-4 md:ps-20">
+    <div className="absolute inset-0 z-10 flex flex-col justify-start md:justify-between p-4 md:ps-20">
+
       <div className="space-y-4 md:space-y-6">
         <p className="text-muted poppins-normal text-base md:text-3xl">
           {slide.title}
@@ -46,15 +47,17 @@ export const Carousel = (props: any) => {
         </div>
       </div>
 
-      {/* Button at the bottom of overlay */}
-      <div className="mt-4 md:mt-10 pb-6 md:pb-12">
-        <GreenBtn
-          title="Signup & Trade Live!"
-          url="https://exchange.onetrade.live"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-      </div>
+     
+      <div className="mt-2 md:mt-10 md:pb-12">
+
+  <GreenBtn
+    title="Signup & Trade Live!"
+    url="https://exchange.onetrade.live"
+    target="_blank"
+    rel="noopener noreferrer"
+  />
+</div>
+
     </div>
 
     {/* Image in the background */}

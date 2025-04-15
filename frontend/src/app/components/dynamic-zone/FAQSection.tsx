@@ -25,7 +25,7 @@ export const FAQSection = (props: any) => {
                     className="flex justify-between items-center cursor-pointer poppins-normal text-light-gray"
                     onClick={() => toggleFAQ(index)}
                   >
-                    <p className="text-xl md:text-2xl poppins-semibold text-light-gray">
+                    <p className="text-xl md:text-2xl poppins text-light-gray">
                       {faq.question}
                     </p>
                     <button
