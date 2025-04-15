@@ -47,18 +47,17 @@ export const Carousel = (props: any) => {
         </div>
       </div>
 
-     
-      <div className="mt-2 md:mt-10 md:pb-12">
-
-  <GreenBtn
-    title="Signup & Trade Live!"
-    url="https://exchange.onetrade.live"
-    target="_blank"
-    rel="noopener noreferrer"
-  />
+  {/* Button position – just above middle in mobile */}
+  <div className="mt-12 md:mt-10 pb-4 md:pb-12 self-start">
+    <GreenBtn
+      title="Signup & Trade Live!"
+      url="https://exchange.onetrade.live"
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+  </div>
 </div>
 
-    </div>
 
     {/* Image in the background */}
     <a href={link} target={target} rel="noopener noreferrer">
