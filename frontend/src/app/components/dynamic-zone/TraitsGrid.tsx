@@ -6,7 +6,7 @@ export const TraitsGrid = (props: any) => {
   return (
     <section
       id="how-it-works"
-      className="bg-black bg-neutral-900 p-2 py-12 text-white md:p-5"
+      className="bg-black bg-neutral-900 p-2 py-12 text-white md:p-5 scroll-mt-20"
     >
       {/* Header */}
       <div className="mb-10 text-center">
