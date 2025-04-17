@@ -8,7 +8,7 @@ export const FAQSection = (props: any) => {
   };
 
   return (
-    <section id="faq">
+    <section id="faq" className="scroll-mt-24">
       <div className="bg-black text-white py-16 px-4">
         <p className="text-2xl md:text-6xl text-center mb-12 arial-regular">
           {props.sectionTitle}
