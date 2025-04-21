@@ -10,14 +10,14 @@ export default function Footer({ FooterNavItems }: { FooterNavItems: any }) {
             <div className="flex items-center space-x-2">
               <Link href="/">
                 <img
-                  src="/logo.png" // Replace with your logo path
+                  src="/logo_footor.png" // Replace with your logo path
                   alt="OneTrade Logo"
                   className="h-22 w-22"
                 />
               </Link>
             </div>
           </div>
-          <p className="text-gray-400">Trade Live, Think ahead</p>
+          {/* <p className="text-gray-400">Trade Live, Think ahead</p> */}
         </div>
 
         {/* Links */}
