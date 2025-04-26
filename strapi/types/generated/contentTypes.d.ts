@@ -378,7 +378,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     singularName: "blog";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     author: Schema.Attribute.Relation<"oneToOne", "admin::user">;
@@ -421,7 +421,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: "category";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -452,7 +452,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     singularName: "enquiry";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     country: Schema.Attribute.String;
@@ -487,7 +487,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     singularName: "global";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -520,7 +520,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     singularName: "page";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {
@@ -590,7 +590,7 @@ export interface ApiQuestionAnswerQuestionAnswer
     singularName: "question-answer";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     answer: Schema.Attribute.RichText &
@@ -626,7 +626,7 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     singularName: "tag";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
