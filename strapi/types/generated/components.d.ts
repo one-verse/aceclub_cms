@@ -162,7 +162,7 @@ export interface SharedNavItems extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<"shared.cta", true>;
-    NavRHS: Schema.Attribute.Component<"shared.cta", false>;
+    NavRHS: Schema.Attribute.Component<"shared.cta", true>;
   };
 }
 
@@ -194,7 +194,6 @@ export interface SharedSlide extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<"shared.cta", false>;
     description: Schema.Attribute.RichText &
-      Schema.Attribute.Required &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
         {
@@ -206,7 +205,7 @@ export interface SharedSlide extends Struct.ComponentSchema {
       "images" | "files" | "videos" | "audios"
     > &
       Schema.Attribute.Required;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.Text;
   };
 }
 

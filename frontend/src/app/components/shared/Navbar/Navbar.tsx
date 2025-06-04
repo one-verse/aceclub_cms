@@ -2,8 +2,18 @@ import Image from "next/image";
 import GreenBtn from "../GreenBtn";
 import { strapiImage } from "../../../../../lib/strapi/strapiImage";
 import Link from "next/link";
+import { Key } from "react";
 
 interface NavItem {
+  length: number;
+  map(
+    arg0: (item: {
+      id: Key | null | undefined;
+      title: string;
+      link: string;
+      target: string;
+    }) => import("react").JSX.Element
+  ): import("react").ReactNode;
   id?: number;
   title: string;
   link: string;
@@ -54,7 +64,30 @@ const Navbar = ({
         <div className="nav-trait hidden md:block">
           <p className="text-lg font-bold">18+ only</p>
         </div>
-        {navRHS && (
+        {navRHS && navRHS.length > 0 && (
+          <div className="nav-cta hidden md:block">
+            <ul>
+              {navRHS.map(
+                (item: {
+                  id: Key | null | undefined;
+                  title: string;
+                  link: string;
+                  target: string;
+                }) => (
+                  <li key={item.id}>
+                    <GreenBtn
+                      title={item.title}
+                      url={item.link}
+                      target={item.target}
+                    />
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        )}
+
+        {/* {navRHS && (
           <div className="nav-cta hidden md:block">
             <ul>
               <li>
@@ -62,7 +95,7 @@ const Navbar = ({
               </li>
             </ul>
           </div>
-        )}
+        )} */}
       </nav>
     </header>
   );

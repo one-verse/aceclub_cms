@@ -378,7 +378,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     singularName: "blog";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     author: Schema.Attribute.Relation<"oneToOne", "admin::user">;
@@ -421,7 +421,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: "category";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -452,7 +452,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     singularName: "enquiry";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     country: Schema.Attribute.String;
@@ -487,7 +487,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     singularName: "global";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -520,7 +520,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     singularName: "page";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -590,7 +590,7 @@ export interface ApiQuestionAnswerQuestionAnswer
     singularName: "question-answer";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     answer: Schema.Attribute.RichText &
@@ -626,12 +626,13 @@ export interface ApiTagTag extends Struct.CollectionTypeSchema {
     singularName: "tag";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
+    link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "api::tag.tag"> &
       Schema.Attribute.Private;

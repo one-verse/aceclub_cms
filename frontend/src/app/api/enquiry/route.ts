@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
       data: forStrapi,
     });
     return NextResponse.json(response.data);
-  } catch (error) {
+  } catch (error: any) {
     return new NextResponse(
       JSON.stringify({
         errorMessage: error.message,
