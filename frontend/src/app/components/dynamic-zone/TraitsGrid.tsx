@@ -40,7 +40,7 @@ export const TraitsGrid = (props: any) => {
               <p className="arial-regular text-light-gray mb-1 text-base md:mb-3 md:text-3xl">
                 {feature.title}
               </p>
-              <div className="text-muted poppins-normal text-sm leading-normal md:w-5/6 md:text-xl">
+              <div className="text-muted roboto-normal text-sm leading-normal md:w-5/6 md:text-xl">
                 <ContentBlock content={feature.description} />
               </div>
             </div>

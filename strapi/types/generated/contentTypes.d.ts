@@ -493,6 +493,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<"shared.footer", false>;
     FooterNavItems: Schema.Attribute.Component<"shared.cta", true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -520,7 +521,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     singularName: "page";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   pluginOptions: {
     i18n: {

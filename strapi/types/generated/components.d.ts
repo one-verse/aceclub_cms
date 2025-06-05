@@ -82,6 +82,7 @@ export interface DynamicZoneFaqSection extends Struct.ComponentSchema {
 export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
   collectionName: "components_dynamic_zone_mega_sections";
   info: {
+    description: "";
     displayName: "MegaSection";
   };
   attributes: {
@@ -92,9 +93,10 @@ export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
           preset: "defaultHtml";
         }
       >;
+    PlayButton: Schema.Attribute.Component<"shared.cta", false>;
     RHSImage: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     title: Schema.Attribute.Text;
-    variant: Schema.Attribute.Enumeration<["pink", "green"]>;
+    variant: Schema.Attribute.Enumeration<["pink", "green", "theme"]>;
   };
 }
 
@@ -141,15 +143,38 @@ export interface SeoSeo extends Struct.ComponentSchema {
 export interface SharedCta extends Struct.ComponentSchema {
   collectionName: "components_shared_ctas";
   info: {
+    description: "";
     displayName: "CTA";
     icon: "cursor";
   };
   attributes: {
     link: Schema.Attribute.Text;
+    socialIcon: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
     target: Schema.Attribute.Enumeration<
       ["_self", "_blank", "_top", "_parent"]
     >;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFooter extends Struct.ComponentSchema {
+  collectionName: "components_shared_footers";
+  info: {
+    description: "";
+    displayName: "Footer";
+  };
+  attributes: {
+    footerCopyRight: Schema.Attribute.Text;
+    footerLogo: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+    footerNavItems: Schema.Attribute.Component<"shared.nav-items", false>;
+    footerText: Schema.Attribute.Text;
+    footerWarning: Schema.Attribute.Text;
+    socialLinks: Schema.Attribute.Component<"shared.nav-items", false>;
+    usefullLinks: Schema.Attribute.Component<"shared.nav-items", false>;
   };
 }
 
@@ -162,7 +187,6 @@ export interface SharedNavItems extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<"shared.cta", true>;
-    NavRHS: Schema.Attribute.Component<"shared.cta", false>;
   };
 }
 
@@ -242,6 +266,7 @@ declare module "@strapi/strapi" {
       "dynamic-zone.traits-grid": DynamicZoneTraitsGrid;
       "seo.seo": SeoSeo;
       "shared.cta": SharedCta;
+      "shared.footer": SharedFooter;
       "shared.nav-items": SharedNavItems;
       "shared.questions": SharedQuestions;
       "shared.slide": SharedSlide;

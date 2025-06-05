@@ -11,7 +11,7 @@ export default function GreenBtn({
   return (
     <>
       <Link
-        className="block md:inline-block btn primary-green text-black font-sans p-4 px-6 text-lg text-center"
+        className="block md:inline-block btn primary-green text-black font-medium text-sm px-5 py-2.5  text-center"
         href={url}
         target="_blank"
         rel="noopener noreferrer"

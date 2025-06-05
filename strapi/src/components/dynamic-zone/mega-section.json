@@ -1,7 +1,8 @@
 {
   "collectionName": "components_dynamic_zone_mega_sections",
   "info": {
-    "displayName": "MegaSection"
+    "displayName": "MegaSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,18 +20,25 @@
       "type": "enumeration",
       "enum": [
         "pink",
-        "green"
+        "green",
+        "theme"
       ]
     },
     "RHSImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "PlayButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta"
     }
   }
 }

@@ -64,7 +64,7 @@ export default function OneTradeWorks() {
                 {feature.title}
               </p>
             </div>
-            <p className="text-muted poppins-normal leading-normal text-xl w-5/6">
+            <p className="text-muted roboto-normal leading-normal text-xl w-5/6">
               {feature.description}
             </p>
           </div>

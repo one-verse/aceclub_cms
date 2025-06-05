@@ -39,10 +39,10 @@ export const Carousel = (props: any) => {
     <div className="absolute inset-0 z-10 flex flex-col justify-start md:justify-between p-4 md:ps-20">
 
       <div className="space-y-4 md:space-y-6">
-        <p className="text-muted poppins-normal text-base md:text-3xl">
+        <p className="text-muted roboto-normal text-base md:text-3xl">
           {slide.title}
         </p>
-        <div className="text-muted poppins-normal text-base md:text-3xl">
+        <div className="text-muted roboto-normal text-base md:text-3xl">
           <ContentBlock content={slide.description} />
         </div>
       </div>

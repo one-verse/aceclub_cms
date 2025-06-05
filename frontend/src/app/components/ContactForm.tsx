@@ -274,7 +274,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="poppins-bold form-submit w-full rounded-xl bg-teal-500 py-2 text-xl font-bold text-white"
+            className="roboto-bold form-submit w-full rounded-xl bg-teal-500 py-2 text-xl font-bold text-white"
           >
             Submit
           </button>

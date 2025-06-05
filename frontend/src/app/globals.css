@@ -1,128 +1,129 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
-.poppins-thin {
-  font-family: "Poppins" !important;;
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
-.poppins-extralight {
-  font-family: "Poppins" !important;;
+.roboto-extralight {
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
-.poppins-light {
-  font-family: "Poppins" !important;
+.roboto-light {
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .arial-regular {
-  font-family: "Poppins" !important;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.poppins-regular {
-  font-family: "Poppins" !important;
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.poppins-medium {
-  font-family: "Poppins" !important;
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.poppins-semibold {
-  font-family: "Poppins" !important;
+.roboto-semibold {
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-.poppins-bold {
-  font-family: "Poppins" !important;
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.poppins-extrabold {
-  font-family: "Poppins" !important;
+.roboto-extrabold {
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
 
-.poppins-black {
-  font-family: "Poppins" !important;
+.roboto-black {
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
-.poppins-thin-italic {
-  font-family: "Poppins" !important;
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
-.poppins-extralight-italic {
-  font-family: "Poppins" !important;
+.roboto-extralight-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
 
-.poppins-light-italic {
-  font-family: "Poppins" !important;
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
-.poppins-regular-italic {
-  font-family: "Poppins" !important;
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.poppins-medium-italic {
-  font-family: "Poppins" !important;
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
-.poppins-semibold-italic {
-  font-family: "Poppins" !important;
+.roboto-semibold-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
 
-.poppins-bold-italic {
-  font-family: "Poppins" !important;
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
-.poppins-extrabold-italic {
-  font-family: "Poppins" !important;
+.roboto-extrabold-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   font-style: italic;
 }
 
-.poppins-black-italic {
-  font-family: "Poppins" !important;
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
 .inter-normal {
-  font-family: "Poppins" !important;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
 .inter-bold {
-  font-family: "Poppins" !important;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
@@ -133,8 +134,9 @@
 @tailwind utilities;
 
 * {
-  font-family: "Poppins" !important;
+  font-family: "Roboto", sans-serif;
 }
+
 
 html {
   background-color: black;
@@ -148,8 +150,9 @@ body {
   --background: #ffffff;
   --foreground: #171717;
   --nav-item-color: rgb(204, 204, 204);
-  --nav-item-color-light: rgba(204, 204, 204, 0.5);
+  --nav-item-color-light: #A3A3A3;
   --light-gray: #767676;
+  --light-yellow: #FFC44D;
 }
 html {
   scroll-behavior: smooth;
@@ -171,14 +174,17 @@ header {
   color: var(--nav-item-color);
 }
 .nav-list ul {
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px);
   background-color: rgba(23, 23, 23, 0.9);
   border-radius: 50px;
-  border: 1px solid rgb(38, 38, 38);
+  border: 1px solid rgb(38, 38, 38); */
   color: inherit;
 }
 .nav-list li a {
   color: var(--nav-item-color-light);
+}
+.nav-list li a:hover {
+  color: var(--light-yellow);
 }
 
 header p {
@@ -186,19 +192,20 @@ header p {
 }
 
 .btn.primary-green {
-  border: 1px solid rgb(128, 191, 162);
-  background: linear-gradient(rgb(42, 157, 143) 0%, rgb(133, 193, 163) 100%);
-  border-radius: 50px;
-  box-shadow: rgb(92, 255, 231) 0px 0px 0px 0px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 235, 138, 0.50);
+  background: linear-gradient(180deg, #FFE668 0%, #FFA43C 100%);
+  box-shadow: 0px -4px 4px 0px rgba(255, 244, 162, 0.75) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   transition: background 250ms, transform 250ms ease-in-out,
     box-shadow 250ms ease-out;
 }
 
 .btn.primary-green:hover {
-  border: 1px solid rgb(128, 191, 162);
-  background: linear-gradient(rgb(133, 193, 163) 0%, rgb(42, 157, 143) 100%);
-  box-shadow: rgb(92, 255, 231) 0px 0px 10px 0px;
-  transform: scale(1.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 235, 138, 0.50);
+  background: linear-gradient(180deg, #FFA43C 0%, #FFE668 100%);
+  box-shadow: 0px -4px 4px 0px rgba(255, 244, 162, 0.75) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
 }
 
 .tag-card {
@@ -254,8 +261,8 @@ section.variant-pink {
 }
 
 .faq.active {
-  background-color: rgba(22, 22, 22, 1);
-  border-radius: 24px;
+  background-color: #1C262E;
+  border-radius: 16px;
 }
 
 .border-radius-primary {
@@ -349,3 +356,38 @@ body {
     min-height: auto;
   }
 }
+
+
+/* Ac club common css start */
+.bgHeader {
+  border-bottom: 1px solid #F3D27B;
+  background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
+}
+.text-theme {
+  color: #A3A3A3;
+}
+.text-theme-yellow {
+  color: #FFC44D;
+}
+section.variant-theme {
+  background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
+}
+.bgTheme {
+  background: #0F1318;
+}
+
+.textGredient {
+  background: var(--White-Linear, linear-gradient(180deg, #D9D9D9 0%, #B2B2B2 87%, #DEDEDE 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bgFaq {
+  background: #1C262E;
+}
+.footerBg {
+  border-top: 1px solid #384E5C;
+  background: #11171D;
+}
+/* Ac club common css end */
