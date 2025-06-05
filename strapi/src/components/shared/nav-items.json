@@ -14,7 +14,7 @@
     },
     "NavRHS": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.cta"
     }
   }

@@ -162,7 +162,7 @@ export interface SharedNavItems extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<"shared.cta", true>;
-    NavRHS: Schema.Attribute.Component<"shared.cta", true>;
+    NavRHS: Schema.Attribute.Component<"shared.cta", false>;
   };
 }
 
