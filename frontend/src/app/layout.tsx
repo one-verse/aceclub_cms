@@ -46,7 +46,7 @@ export default async function RootLayout({
           items={pageData.NavigationBar.items}
         />
         <main className="">{children}</main>
-        <Footer FooterNavItems={pageData.FooterNavItems} />
+        <Footer FooterData={pageData.footer} />
       </body>
     </html>
   );

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dynamic_zone_why_chooseuses",
+  "info": {
+    "displayName": "WhyChooseUs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "text"
+    },
+    "sectionDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "traits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.trait"
+    }
+  }
+}

@@ -65,7 +65,8 @@
         "dynamic-zone.traits-grid",
         "dynamic-zone.content-block",
         "dynamic-zone.faq-section",
-        "dynamic-zone.blog-section"
+        "dynamic-zone.blog-section",
+        "dynamic-zone.why-choose-us"
       ]
     }
   }

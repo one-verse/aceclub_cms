@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { strapiImage } from "../../../../lib/strapi/strapiImage";
 interface MegaSectionType {
   title: string;
   description: string;
@@ -18,7 +19,7 @@ export const MegaSection = (props: MegaSectionType) => {
         className={clsx(
           "container max-w-[1400px] mx-auto md:px-20",
           props.RHSImage
-            ? "flex flex-col md:flex-row content-center items-center p-4 w-full mx-auto md:space-x-12"
+            ? "flex flex-col md:flex-row content-center items-center p-10 w-full mx-auto md:space-x-12"
             : "p-4 md:p-20"
         )}
       >
@@ -51,7 +52,7 @@ export const MegaSection = (props: MegaSectionType) => {
           <div className="">
             <Image
               className="mx-auto block h-auto max-w-full"
-              src={"/img/tell_us.webp"}
+              src={ strapiImage(props.RHSImage.url)}
               width={500}
               height={100}
               alt="girl"

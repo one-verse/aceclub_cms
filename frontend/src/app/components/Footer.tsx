@@ -1,42 +1,81 @@
 import Link from "next/link";
+import { strapiImage } from "../../../lib/strapi/strapiImage";
 
-export default function Footer({ FooterNavItems }: { FooterNavItems: any }) {
+export default function Footer({ FooterData }: { FooterData: any }) {
+  const {
+    footerText,
+    footerCopyRight,
+    footerWarning,
+    footerLogo,
+    footerNavItems,
+    socialLinks,
+    usefullLinks,
+  } = FooterData;
+
+  const logoUrl = footerLogo?.formats?.small?.url || footerLogo?.url;
   return (
     <footer className="bg-black p-8 text-white">
-      <div className="mx-auto max-w-5xl text-center">
-        {/* Logo and Tagline */}
-        <div className="mb-6">
-          <div className="mb-2 flex items-center justify-center">
-            <div className="flex items-center space-x-2">
-              <Link href="/">
-                <img
-                  src="/logo_footor.png" // Replace with your logo path
-                  alt="OneTrade Logo"
-                  className="h-22 w-22"
-                />
-              </Link>
-            </div>
+      <div className="max-w-6xl mx-auto text-center space-y-6">
+        {/* Logo */}
+        {logoUrl && (
+          <div>
+            <Link href="/">
+              <img
+                src={strapiImage(logoUrl)}
+                alt="Footer Logo"
+                className="mx-auto h-20 object-contain"
+              />
+            </Link>
           </div>
-          {/* <p className="text-gray-400">Trade Live, Think ahead</p> */}
+        )}
+        {/* Footer Text */}
+        {footerText && <p className="text-sm text-gray-400">{footerText}</p>}
+
+        {/* Navigation Links */}
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
+          {footerNavItems?.items?.map((item: any) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              target={item.target}
+              className="text-muted text-sm hover:text-white">
+              {item.title}
+            </Link>
+          ))}
         </div>
 
-        {/* Links */}
-        <div className="flex flex-col justify-start space-y-3 text-sm text-gray-400 md:flex-row md:justify-center md:space-x-6 md:space-y-0">
-          {FooterNavItems.map(
-            (
-              ele: { link: string; target: string; title: string },
-              ind: number
-            ) => (
-              <Link
-                className="text-muted poppins-normal"
-                key={ind}
-                href={ele.link}
-                target={ele.target}
-              >
-                {ele.title}
-              </Link>
-            )
-          )}
+        {/* Social Links */}
+        <div className="flex justify-center space-x-4 mt-4">
+          {socialLinks?.items?.map((item: any) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              target={item.target}
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+
+        {/* usefullLinks Links */}
+        <div className="flex justify-center space-x-4 mt-4">
+          {usefullLinks?.items?.map((item: any) => (
+            <Link
+              key={item.id}
+              href={item.link}
+              target={item.target}
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="text-xs text-gray-600 mt-6 space-y-2">
+          {footerWarning && <p>{footerWarning}</p>}
+          {footerCopyRight && <p>{footerCopyRight}</p>}
         </div>
       </div>
     </footer>

@@ -11,6 +11,11 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.cta"
+    },
+    "NavRHS": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
     }
   }
 }

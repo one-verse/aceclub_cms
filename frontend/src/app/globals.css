@@ -245,12 +245,12 @@ header p {
 }
 
 .work-card {
-  border: 1px solid #262626;
+  /* border: 1px solid #262626;
   background-color: #0A1B19;
   border-radius: 24px;
   height: 100%;
   position: relative;
-  min-height: 350px;
+  min-height: 350px; */
 }
 
 section.variant-green {
@@ -376,6 +376,10 @@ section.variant-theme {
   background: #0F1318;
 }
 
+.gredientBg {
+  background: var(--background-Gradient, radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%));
+  box-shadow: 0px 0px 84px 0px rgba(114, 154, 182, 0.20) inset;
+}
 .textGredient {
   background: var(--White-Linear, linear-gradient(180deg, #D9D9D9 0%, #B2B2B2 87%, #DEDEDE 100%));
   background-clip: text;
@@ -389,5 +393,8 @@ section.variant-theme {
 .footerBg {
   border-top: 1px solid #384E5C;
   background: #11171D;
+}
+.themeGredient {
+  background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
 }
 /* Ac club common css end */

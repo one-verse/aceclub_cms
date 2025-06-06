@@ -120,6 +120,25 @@ export interface DynamicZoneTraitsGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneWhyChooseUs extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_why_chooseuses";
+  info: {
+    description: "";
+    displayName: "WhyChooseUs";
+  };
+  attributes: {
+    sectionDescription: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    sectionTitle: Schema.Attribute.Text;
+    traits: Schema.Attribute.Component<"shared.trait", true>;
+  };
+}
+
 export interface SeoSeo extends Struct.ComponentSchema {
   collectionName: "components_seo_seos";
   info: {
@@ -163,7 +182,7 @@ export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: "components_shared_footers";
   info: {
     description: "";
-    displayName: "Footer";
+    displayName: "FooterNav";
   };
   attributes: {
     footerCopyRight: Schema.Attribute.Text;
@@ -187,6 +206,7 @@ export interface SharedNavItems extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.Component<"shared.cta", true>;
+    NavRHS: Schema.Attribute.Component<"shared.cta", true>;
   };
 }
 
@@ -264,6 +284,7 @@ declare module "@strapi/strapi" {
       "dynamic-zone.faq-section": DynamicZoneFaqSection;
       "dynamic-zone.mega-section": DynamicZoneMegaSection;
       "dynamic-zone.traits-grid": DynamicZoneTraitsGrid;
+      "dynamic-zone.why-choose-us": DynamicZoneWhyChooseUs;
       "seo.seo": SeoSeo;
       "shared.cta": SharedCta;
       "shared.footer": SharedFooter;

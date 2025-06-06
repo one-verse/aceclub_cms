@@ -547,6 +547,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "dynamic-zone.content-block",
         "dynamic-zone.faq-section",
         "dynamic-zone.blog-section",
+        "dynamic-zone.why-choose-us",
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
