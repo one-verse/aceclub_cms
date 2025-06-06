@@ -394,6 +394,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         "dynamic-zone.categories-grid",
         "dynamic-zone.carousel",
         "dynamic-zone.traits-grid",
+        "dynamic-zone.our-premier",
       ]
     >;
     excerpt: Schema.Attribute.Text;
@@ -548,6 +549,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "dynamic-zone.faq-section",
         "dynamic-zone.blog-section",
         "dynamic-zone.why-choose-us",
+        "dynamic-zone.our-premier",
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

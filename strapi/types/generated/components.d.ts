@@ -100,6 +100,29 @@ export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneOurPremier extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_our_premiers";
+  info: {
+    description: "";
+    displayName: "OurPremier";
+  };
+  attributes: {
+    primierBg: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    primierBoxBg: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+    sectionDescription: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    sectionTitle: Schema.Attribute.Text;
+    traits: Schema.Attribute.Component<"shared.trait", true>;
+  };
+}
+
 export interface DynamicZoneTraitsGrid extends Struct.ComponentSchema {
   collectionName: "components_dynamic_zone_traits_grids";
   info: {
@@ -283,6 +306,7 @@ declare module "@strapi/strapi" {
       "dynamic-zone.content-block": DynamicZoneContentBlock;
       "dynamic-zone.faq-section": DynamicZoneFaqSection;
       "dynamic-zone.mega-section": DynamicZoneMegaSection;
+      "dynamic-zone.our-premier": DynamicZoneOurPremier;
       "dynamic-zone.traits-grid": DynamicZoneTraitsGrid;
       "dynamic-zone.why-choose-us": DynamicZoneWhyChooseUs;
       "seo.seo": SeoSeo;

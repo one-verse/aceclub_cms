@@ -14,8 +14,8 @@ export default function Footer({ FooterData }: { FooterData: any }) {
 
   const logoUrl = footerLogo?.formats?.small?.url || footerLogo?.url;
   return (
-    <footer className="bg-black p-8 text-white">
-      <div className="max-w-6xl mx-auto text-center space-y-6">
+    <footer className="footerBg py-10 px-4 text-white">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Logo */}
         {logoUrl && (
           <div>
@@ -23,29 +23,34 @@ export default function Footer({ FooterData }: { FooterData: any }) {
               <img
                 src={strapiImage(logoUrl)}
                 alt="Footer Logo"
-                className="mx-auto h-20 object-contain"
+                className="mx-auto mb-4"
+                width={502}
+                height={60}
               />
             </Link>
           </div>
         )}
         {/* Footer Text */}
-        {footerText && <p className="text-sm text-gray-400">{footerText}</p>}
+        {footerText &&
+          <p className="text-sm text-theme mb-8 w-full md:w-3/5 mx-auto">{footerText}</p>}
 
         {/* Navigation Links */}
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
+        <div className="flex flex-wrap justify-center gap-1 mb-6 footerNav">
           {footerNavItems?.items?.map((item: any) => (
             <Link
               key={item.id}
               href={item.link}
               target={item.target}
-              className="text-muted text-sm hover:text-white">
+              className="text-theme text-sm px-2">
               {item.title}
             </Link>
           ))}
         </div>
-
+        <div className="text-xs text-theme mb-6 space-y-2">
+          {footerCopyRight && <p>{footerCopyRight}</p>}
+        </div>
         {/* Social Links */}
-        <div className="flex justify-center space-x-4 mt-4">
+        <div className="flex justify-center space-x-4 mb-6">
           {socialLinks?.items?.map((item: any) => (
             <Link
               key={item.id}
@@ -53,19 +58,19 @@ export default function Footer({ FooterData }: { FooterData: any }) {
               target={item.target}
               className="text-gray-400 hover:text-white text-sm"
             >
-              {item.title}
+              <img src={strapiImage(item.socialIcon.url)} className="mx-auto"  width={40}/>
             </Link>
           ))}
         </div>
 
         {/* usefullLinks Links */}
-        <div className="flex justify-center space-x-4 mt-4">
+        <div className="flex justify-center space-x-4 mb-6 footerNav">
           {usefullLinks?.items?.map((item: any) => (
             <Link
               key={item.id}
               href={item.link}
               target={item.target}
-              className="text-gray-400 hover:text-white text-sm"
+              className="text-theme text-sm px-2"
             >
               {item.title}
             </Link>
@@ -73,9 +78,8 @@ export default function Footer({ FooterData }: { FooterData: any }) {
         </div>
 
         {/* Footer Bottom */}
-        <div className="text-xs text-gray-600 mt-6 space-y-2">
+        <div className="text-xs text-theme space-y-2">
           {footerWarning && <p>{footerWarning}</p>}
-          {footerCopyRight && <p>{footerCopyRight}</p>}
         </div>
       </div>
     </footer>

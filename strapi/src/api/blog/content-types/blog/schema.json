@@ -61,7 +61,8 @@
         "dynamic-zone.content-block",
         "dynamic-zone.categories-grid",
         "dynamic-zone.carousel",
-        "dynamic-zone.traits-grid"
+        "dynamic-zone.traits-grid",
+        "dynamic-zone.our-premier"
       ]
     },
     "minsToRead": {

@@ -369,6 +369,9 @@ body {
 .text-theme-yellow {
   color: #FFC44D;
 }
+.text-theme-yellow:hover {
+  color: #FFA500;
+}
 section.variant-theme {
   background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
 }
@@ -397,4 +400,34 @@ section.variant-theme {
 .themeGredient {
   background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
 }
+.footerBg {
+  border-top: 1px solid #384E5C;
+  background: #11171D;
+}
+.footerNav a {
+  border-right: 1px solid rgba(163, 163, 163, 0.50);
+}
+.footerNav a:last-child {
+  border: none;
+}
+.footerBg a:hover {
+  color: var(--light-yellow);
+}
+
+.primier-card {
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  min-height: 240px;
+  position: relative;
+}
+.primierIcon {
+  position: relative;
+  top: -30px;
+}
+.primier-desc {
+  position: relative;
+  top: -10px;
+}
+
 /* Ac club common css end */

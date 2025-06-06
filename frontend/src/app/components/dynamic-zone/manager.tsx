@@ -37,6 +37,9 @@ const componentMapping: { [key: string]: any } = {
   "dynamic-zone.why-choose-us": dynamic(() =>
     import("./WhyChooseUs").then((mod) => mod.WhyChooseUs)
   ),
+  "dynamic-zone.our-premier": dynamic(() =>
+    import("./OurPremier").then((mod) => mod.OurPremier)
+  ),
 };
 
 const DynamicZoneManager: React.FC<Props> = ({ dynamicZone }) => {
