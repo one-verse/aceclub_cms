@@ -39,16 +39,16 @@ export const Carousel = (props: any) => {
     <div className="absolute inset-0 z-10 flex flex-col justify-start md:justify-between p-4 md:ps-20">
 
       <div className="space-y-4 md:space-y-6">
-        <p className="text-muted roboto-normal text-base md:text-3xl">
+        {/* <p className="text-muted roboto-normal text-base md:text-3xl">
           {slide.title}
-        </p>
+        </p> */}
         <div className="text-muted roboto-normal text-base md:text-3xl">
           <ContentBlock content={slide.description} />
         </div>
       </div>
 
   
-      <div className="mt-48 md:mt-10 pb-4 md:pb-12 self-center md:self-start">
+      {/* <div className="mt-48 md:mt-10 pb-4 md:pb-12 self-center md:self-start">
 
     <GreenBtn
       title="Signup & Trade Live!"
@@ -56,7 +56,7 @@ export const Carousel = (props: any) => {
       target="_blank"
       rel="noopener noreferrer"
     />
-  </div>
+  </div> */}
 </div>
 
 
