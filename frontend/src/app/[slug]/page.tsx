@@ -22,11 +22,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
   }
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen bgTheme">
     <div className="container mx-auto max-w-[1200px] px-4">
-      <p className="h1 font-sans text-light my-5 text-center text-5xl text-white">
+      {/* <p className="h1 font-sans text-light my-5 text-center text-5xl text-white">
         {pageData.title}
-      </p>
+      </p> */}
       <div className="my-3" style={{ color: "#CCCCCC" }}>
         {pageData.DynamicZone && (
           <DynamicZoneManager dynamicZone={pageData.DynamicZone} />

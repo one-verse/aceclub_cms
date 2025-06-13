@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_promotions",
+  "info": {
+    "displayName": "Promotion",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "promotionImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "knowMore": {
+      "type": "text"
+    },
+    "knowMoreContent": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "PlayButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta"
+    }
+  }
+}

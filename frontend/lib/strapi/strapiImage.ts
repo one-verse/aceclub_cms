@@ -4,8 +4,8 @@ export function strapiImage(url: string): string {
   noStore();
   if (url.startsWith("/")) {
     if (
-      !process.env.NEXT_PUBLIC_STRAPI_IMAGE_API_URL &&
-      document?.location.host.endsWith(".onetrade.live")
+      !process.env.NEXT_PUBLIC_STRAPI_IMAGE_API_URL 
+      && document?.location.host.endsWith(".onetrade.live")
     ) {
       return `https://${document.location.host.replace(
         "client-",

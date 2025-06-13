@@ -14,7 +14,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
 
   const logoUrl = footerLogo?.formats?.small?.url || footerLogo?.url;
   return (
-    <footer className="footerBg py-10 px-4 text-white">
+    <footer className="footerBg pt-10 pb-20 md:py-10 px-4 text-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* Logo */}
         {logoUrl && (
@@ -41,7 +41,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
               key={item.id}
               href={item.link}
               target={item.target}
-              className="text-theme text-sm px-2">
+              className="text-theme text-xs md:text-sm px-2">
               {item.title}
             </Link>
           ))}
@@ -50,13 +50,13 @@ export default function Footer({ FooterData }: { FooterData: any }) {
           {footerCopyRight && <p>{footerCopyRight}</p>}
         </div>
         {/* Social Links */}
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center mb-6 gap-4">
           {socialLinks?.items?.map((item: any) => (
             <Link
               key={item.id}
               href={item.link}
               target={item.target}
-              className="text-gray-400 hover:text-white text-sm"
+              className="text-gray-400 hover:text-white text-xs md:text-sm"
             >
               <img src={strapiImage(item.socialIcon.url)} className="mx-auto"  width={40}/>
             </Link>
@@ -64,13 +64,13 @@ export default function Footer({ FooterData }: { FooterData: any }) {
         </div>
 
         {/* usefullLinks Links */}
-        <div className="flex justify-center space-x-4 mb-6 footerNav">
+        <div className="flex justify-center mb-6 footerNav">
           {usefullLinks?.items?.map((item: any) => (
             <Link
               key={item.id}
               href={item.link}
               target={item.target}
-              className="text-theme text-sm px-2"
+              className="text-theme text-xs md:text-sm px-2"
             >
               {item.title}
             </Link>

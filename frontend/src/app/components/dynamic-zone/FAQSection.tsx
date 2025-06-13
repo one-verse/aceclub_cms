@@ -14,7 +14,7 @@ export const FAQSection = (props: any) => {
           {props.sectionTitle}
         </p>
         <div className="container max-w-[1200px] mx-auto">
-          <div className="w-4/5 mx-auto">
+          <div className="w-full md:w-4/5 mx-auto">
             {props.question_answers.map(
               (faq: { question: string; answer: string }, index: number) => (
                 <div

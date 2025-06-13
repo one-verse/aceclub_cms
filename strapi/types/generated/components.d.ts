@@ -96,7 +96,9 @@ export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
     PlayButton: Schema.Attribute.Component<"shared.cta", false>;
     RHSImage: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     title: Schema.Attribute.Text;
-    variant: Schema.Attribute.Enumeration<["pink", "green", "theme"]>;
+    variant: Schema.Attribute.Enumeration<
+      ["pink", "green", "theme", "poineersTheme"]
+    >;
   };
 }
 
@@ -120,6 +122,18 @@ export interface DynamicZoneOurPremier extends Struct.ComponentSchema {
       >;
     sectionTitle: Schema.Attribute.Text;
     traits: Schema.Attribute.Component<"shared.trait", true>;
+  };
+}
+
+export interface DynamicZonePromotions extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_promotions";
+  info: {
+    description: "";
+    displayName: "Promotions";
+  };
+  attributes: {
+    Promotion: Schema.Attribute.Component<"shared.promotion", true>;
+    sectionTitle: Schema.Attribute.Text;
   };
 }
 
@@ -233,6 +247,28 @@ export interface SharedNavItems extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedPromotion extends Struct.ComponentSchema {
+  collectionName: "components_shared_promotions";
+  info: {
+    description: "";
+    displayName: "Promotion";
+  };
+  attributes: {
+    knowMore: Schema.Attribute.Text;
+    knowMoreContent: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    PlayButton: Schema.Attribute.Component<"shared.cta", false>;
+    promotionImage: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+  };
+}
+
 export interface SharedQuestions extends Struct.ComponentSchema {
   collectionName: "components_shared_questions";
   info: {
@@ -307,12 +343,14 @@ declare module "@strapi/strapi" {
       "dynamic-zone.faq-section": DynamicZoneFaqSection;
       "dynamic-zone.mega-section": DynamicZoneMegaSection;
       "dynamic-zone.our-premier": DynamicZoneOurPremier;
+      "dynamic-zone.promotions": DynamicZonePromotions;
       "dynamic-zone.traits-grid": DynamicZoneTraitsGrid;
       "dynamic-zone.why-choose-us": DynamicZoneWhyChooseUs;
       "seo.seo": SeoSeo;
       "shared.cta": SharedCta;
       "shared.footer": SharedFooter;
       "shared.nav-items": SharedNavItems;
+      "shared.promotion": SharedPromotion;
       "shared.questions": SharedQuestions;
       "shared.slide": SharedSlide;
       "shared.trait": SharedTrait;

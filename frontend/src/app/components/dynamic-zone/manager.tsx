@@ -40,6 +40,9 @@ const componentMapping: { [key: string]: any } = {
   "dynamic-zone.our-premier": dynamic(() =>
     import("./OurPremier").then((mod) => mod.OurPremier)
   ),
+  "dynamic-zone.promotions": dynamic(() =>
+    import("./Promotions").then((mod) => mod.Promotions)
+  ),
 };
 
 const DynamicZoneManager: React.FC<Props> = ({ dynamicZone }) => {

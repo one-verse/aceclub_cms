@@ -21,32 +21,29 @@ export const TraitsGrid = (props: any) => {
       </div>
 
       {/* Features Grid */}
-      <div className="container mx-auto grid max-w-7xl max-w-[1200px] grid-cols-5 gap-4 px-4">
-        {props.traits.map((feature: any, index: number) => (
-          <div
-            key={index}
-            className="work-card flex items-start space-x-1 p-3 md:flex-col md:space-x-0 text-center"
-          >
-            <div className="mr-auto block flex flex-col items-center mx-auto">
+      <div className="container mx-auto max-w-[1200px] px-4">
+        <div className="flex overflow-x-auto md:overflow-visible md:flex-wrap gap-4">
+          {props.traits.map((feature: any, index: number) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[45%] sm:w-[45%] md:w-[18%] flex flex-col items-center text-center"
+            >
               <Image
                 src={strapiImage(feature.icon.url)}
                 width={100}
                 height={100}
                 alt={feature.icon.alternativeText || ""}
-                className="mb-4 block h-auto max-w-full"
+                className="mb-4 h-auto max-w-full"
               />
-            </div>
-            <div className="work-card-body w-full">
-              <p className="text-light-gray mb-1 text-xl">
-                {feature.title}
-              </p>
-              <div className="text-muted poppins-normal text-sm leading-normal">
+              <p className="text-light-gray mb-1 text-sm md:text-xl">{feature.title}</p>
+              <div className="text-muted poppins-normal text-xs md:text-sm leading-normal">
                 <ContentBlock content={feature.description} />
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
     </section>
   );
 };

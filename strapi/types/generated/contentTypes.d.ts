@@ -550,6 +550,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "dynamic-zone.blog-section",
         "dynamic-zone.why-choose-us",
         "dynamic-zone.our-premier",
+        "dynamic-zone.promotions",
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

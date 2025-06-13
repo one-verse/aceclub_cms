@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dynamic_zone_promotions",
+  "info": {
+    "displayName": "Promotions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "text"
+    },
+    "Promotion": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.promotion"
+    }
+  }
+}

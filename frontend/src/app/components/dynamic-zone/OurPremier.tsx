@@ -60,9 +60,9 @@ export const OurPremier = (props: any) => {
               />
             </div>
             <div className="primier-desc w-full text-center">
-              <p className="text-white text-md">
+              <span className="text-white text-md">
                 {feature.title}
-              </p>
+              </span>
               <div className="text-white roboto-normal text-xs leading-normal">
                 <ContentBlock content={feature.description} />
               </div>
