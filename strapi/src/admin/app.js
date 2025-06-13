@@ -14,8 +14,8 @@ const config = {
   },
   translations: {
     en: {
-      "app.components.LeftMenu.navbrand.title": "One Trade Live",
-      "Auth.form.welcome.subtitle": "One Trade Live",
+      "app.components.LeftMenu.navbrand.title": "ACE CLUB POKER",
+      "Auth.form.welcome.subtitle": "ACE CLUB POKER",
       "Auth.form.welcome.title": "Admin Access",
     },
   },

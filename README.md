@@ -1,4 +1,4 @@
-# CMS Monorepo for One Trade Live Website
+# CMS Monorepo for ACE CLUB POKER Website
 
 ## BACKEND
 
