@@ -109,10 +109,6 @@ export interface DynamicZoneOurPremier extends Struct.ComponentSchema {
     displayName: "OurPremier";
   };
   attributes: {
-    primierBg: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
-    primierBoxBg: Schema.Attribute.Media<
-      "images" | "files" | "videos" | "audios"
-    >;
     sectionDescription: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
@@ -222,15 +218,17 @@ export interface SharedFooter extends Struct.ComponentSchema {
     displayName: "FooterNav";
   };
   attributes: {
+    DownloadItem: Schema.Attribute.Component<"shared.nav-items", false>;
     footerCopyRight: Schema.Attribute.Text;
     footerLogo: Schema.Attribute.Media<
       "images" | "files" | "videos" | "audios"
     >;
-    footerNavItems: Schema.Attribute.Component<"shared.nav-items", false>;
-    footerText: Schema.Attribute.Text;
+    footerSocial: Schema.Attribute.Component<"shared.socail-payment", false>;
     footerWarning: Schema.Attribute.Text;
+    Game: Schema.Attribute.Component<"shared.nav-items", false>;
+    Info: Schema.Attribute.Component<"shared.nav-items", false>;
     socialLinks: Schema.Attribute.Component<"shared.nav-items", false>;
-    usefullLinks: Schema.Attribute.Component<"shared.nav-items", false>;
+    socialMedia: Schema.Attribute.Component<"shared.nav-items", false>;
   };
 }
 
@@ -242,8 +240,10 @@ export interface SharedNavItems extends Struct.ComponentSchema {
     icon: "exit";
   };
   attributes: {
+    footerTitleNav: Schema.Attribute.Text;
     items: Schema.Attribute.Component<"shared.cta", true>;
     NavRHS: Schema.Attribute.Component<"shared.cta", true>;
+    support: Schema.Attribute.Text;
   };
 }
 
@@ -312,6 +312,18 @@ export interface SharedSlide extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSocailPayment extends Struct.ComponentSchema {
+  collectionName: "components_shared_socail_payments";
+  info: {
+    displayName: "socailPayment";
+  };
+  attributes: {
+    certificate: Schema.Attribute.Component<"shared.nav-items", false>;
+    payments: Schema.Attribute.Component<"shared.nav-items", false>;
+    SocialItem: Schema.Attribute.Component<"shared.nav-items", false>;
+  };
+}
+
 export interface SharedTrait extends Struct.ComponentSchema {
   collectionName: "components_shared_traits";
   info: {
@@ -328,8 +340,15 @@ export interface SharedTrait extends Struct.ComponentSchema {
           preset: "defaultHtml";
         }
       >;
-    icon: Schema.Attribute.Media<"images"> & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<"images">;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    traitText: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
   };
 }
 
@@ -353,6 +372,7 @@ declare module "@strapi/strapi" {
       "shared.promotion": SharedPromotion;
       "shared.questions": SharedQuestions;
       "shared.slide": SharedSlide;
+      "shared.socail-payment": SharedSocailPayment;
       "shared.trait": SharedTrait;
     }
   }

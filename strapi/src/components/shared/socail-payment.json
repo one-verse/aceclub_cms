@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_socail_payments",
+  "info": {
+    "displayName": "socailPayment"
+  },
+  "options": {},
+  "attributes": {
+    "SocialItem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    },
+    "certificate": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    },
+    "payments": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    }
+  }
+}

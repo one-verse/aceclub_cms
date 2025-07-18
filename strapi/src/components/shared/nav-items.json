@@ -16,6 +16,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.cta"
+    },
+    "support": {
+      "type": "text"
+    },
+    "footerTitleNav": {
+      "type": "text"
     }
   }
 }

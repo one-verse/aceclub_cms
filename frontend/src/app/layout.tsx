@@ -44,6 +44,7 @@ export default async function RootLayout({
           logo={pageData.Logo}
           navRHS={pageData.NavigationBar.NavRHS}
           items={pageData.NavigationBar.items}
+          support={pageData.NavigationBar.support}
         />
         <main className="">{children}</main>
         <Footer FooterData={pageData.footer} />

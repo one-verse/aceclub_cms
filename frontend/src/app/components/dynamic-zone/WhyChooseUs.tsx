@@ -10,7 +10,7 @@ export const WhyChooseUs = (props: any) => {
     >
       {/* Header */}
       <div className="mb-10 text-center">
-        <h2 className="font-sans text-2xl md:text-4xl mb-8 text-theme-yellow">
+        <h2 className="font-sans text-2xl md:text-4xl mb-8 text-theme-red">
           {props.sectionTitle || ""}
         </h2>
         {props.sectionDescription && (
@@ -37,7 +37,7 @@ export const WhyChooseUs = (props: any) => {
               />
             </div>
             <div className="work-card-body w-full">
-              <p className="text-theme-yellow mb-1 text-xl">
+              <p className="text-theme-red mb-1 text-xl">
                 {feature.title}
               </p>
               <div className="text-white roboto-normal text-sm leading-normal">

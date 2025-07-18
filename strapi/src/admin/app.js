@@ -14,8 +14,8 @@ const config = {
   },
   translations: {
     en: {
-      "app.components.LeftMenu.navbrand.title": "ACE CLUB POKER",
-      "Auth.form.welcome.subtitle": "ACE CLUB POKER",
+      "app.components.LeftMenu.navbrand.title": "Calling Station",
+      "Auth.form.welcome.subtitle": "Calling Station",
       "Auth.form.welcome.title": "Admin Access",
     },
   },

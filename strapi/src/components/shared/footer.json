@@ -17,14 +17,6 @@
         "audios"
       ]
     },
-    "footerText": {
-      "type": "text"
-    },
-    "footerNavItems": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav-items"
-    },
     "footerCopyRight": {
       "type": "text"
     },
@@ -33,13 +25,33 @@
       "repeatable": false,
       "component": "shared.nav-items"
     },
-    "usefullLinks": {
+    "Info": {
       "type": "component",
       "repeatable": false,
       "component": "shared.nav-items"
     },
     "footerWarning": {
       "type": "text"
+    },
+    "Game": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    },
+    "socialMedia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    },
+    "DownloadItem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.nav-items"
+    },
+    "footerSocial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.socail-payment"
     }
   }
 }
