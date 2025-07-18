@@ -176,7 +176,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
 
         {/* ✅ Copyright */}
         {footerCopyRight && (
-          <div className="text-xs text-theme">
+          <div className="text-xs text-theme footerCopy">
             <p>{footerCopyRight}</p>
           </div>
         )}

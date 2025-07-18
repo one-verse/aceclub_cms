@@ -671,5 +671,24 @@ a.active-link::after {
   color: #fff;
   font-weight: 600;
 }
+.footerCopy {
+  position: relative;
+  width: 100%;
+  padding-top: 15px;
+}
+.footerCopy p {
+  margin: 0;
+}
+.footerCopy::before {
+  position: fixed;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height:1px;
+  background:#473333;
+  content: '';
+  bottom: 70px;
+}
 /* Calling station common css end */
 
