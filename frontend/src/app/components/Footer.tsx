@@ -43,7 +43,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
         )}
 
         {/* ✅ Grid Layout for lg (5 col), md (2 col + full), sm (1 col) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6 text-left">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6 text-left">
 
           {/* Info */}
           <div>
@@ -122,8 +122,8 @@ export default function Footer({ FooterData }: { FooterData: any }) {
           </div>
 
           {/* Social Icons (always 1 column — spans full row on md) */}
-          <div className="md:col-span-2 lg:col-span-1">
-            <div className="flex flex-wrap flex-col gap-3">
+          <div className="col-span-2 md:col-span-2 lg:col-span-1">
+            <div className="flex flex-wrap flex-col gap-3 socialFooter">
               <div className="socialItemBox">
                 {footerSocial.SocialItem?.items?.map((item: any) => (
                   <Link

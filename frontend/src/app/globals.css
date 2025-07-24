@@ -159,6 +159,65 @@ body {
 html {
   scroll-behavior: smooth;
 }
+h1 {
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+h2 {
+  font-size: 1.625rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.375rem;
+  margin-bottom: 0.875rem;
+}
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.875rem;
+}
+h5 {
+  font-size: 1.125rem;
+  margin-bottom: 0.875rem;
+}
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.875rem;
+}
+p {
+  font-size: 0.875rem;
+}
+li {
+  font-size: 0.875rem;
+}
+ul {
+  list-style:disc;
+  padding: revert;
+}
+ol {
+  list-style:auto;
+  padding: revert;
+}
+ul li {
+  margin-bottom: 0.625rem;
+}
+a {
+  color: #DD181F;
+}
+.text-muted ol,
+.text-muted ul {
+  list-style: auto;
+  padding:revert;
+}
+.bgHeader ul {
+  list-style: none;
+  padding: 0;
+}
+.bgHeader ul li {
+  margin: 0;
+}
+.bgHeader ul li a {
+  color: #9994A4;
+}
 
 .text-muted {
   color: #9994A4;
@@ -649,7 +708,7 @@ p {
   color:#DE2127;
 }
 a.active-link {
-  color:#DE2127;
+  color:#fff !important;
   position: relative;
 }
 a.active-link::after {
@@ -680,15 +739,74 @@ a.active-link::after {
   margin: 0;
 }
 .footerCopy::before {
-  position: fixed;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   width: 100%;
   height:1px;
   background:#473333;
   content: '';
-  bottom: 70px;
+  top: 0;
 }
+
+@media(max-width:991px) {
+  .destinationBg {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .destinationLeft,
+  .destinationImgBox {
+    min-height: 230px;
+  }
+  section.variant-poineersTheme {
+    padding: 130px 20px 40px;
+  }
+  .themeGredient {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .socialFooter {
+    align-items: center;
+  }
+  .socialFooter h5 {
+    text-align: center;
+  }
+}
+@media(max-width:767px) {
+  .destinationBg {
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .destinationLeft {
+    align-items: center;
+    text-align: center;
+  }
+  .destinationBg h5 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  .destinationImgBox{
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: auto;
+    position: absolute;
+    top: 0;
+  }
+  .destinationImgBox img {
+    bottom: -65px;
+  }
+  .destinationImgBox img {
+    left: 0;
+    right: 0;
+  }
+  section.variant-poineersTheme {
+    padding-top: 290px;
+  }
+}
+
 /* Calling station common css end */
 

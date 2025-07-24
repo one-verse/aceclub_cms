@@ -70,7 +70,11 @@ const Navbar = ({
                 <li key={item.id}>
                   <GreenBtn
                     title={item.title}
-                    url={item.link}
+                    url={
+                      /Mobi|Android/i.test(navigator.userAgent)
+                      ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
+                      : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
+                    }
                     target={item.target}
                   />
                 </li>
@@ -137,7 +141,11 @@ const Navbar = ({
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
           <GreenBtn
             title={navRHS[0].title}
-            url={navRHS[0].link}
+            url={
+              /Mobi|Android/i.test(navigator.userAgent)
+          ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
+          : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
+            }
             target={navRHS[0].target}
           />
         </div>
