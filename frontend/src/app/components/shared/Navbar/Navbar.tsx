@@ -72,7 +72,7 @@ const Navbar = ({
                     title={item.title}
                     url={
                       /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                        ? "https://apps.apple.com/us/app/calling-station-game/id1529711235"
+                        ? "https://apps.apple.com/in/app/calling-station-poker-game/id6747385318"
                         : /Android/i.test(window.navigator.userAgent)
                         ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
                         : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
