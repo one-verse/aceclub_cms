@@ -375,7 +375,7 @@ span.swiper-pagination-bullet {
   color: transparent;
   margin: 0 0.2rem;
   position: relative;
-  background: linear-gradient(180deg, #85c1a3 0%, rgb(42, 157, 143) 100%);
+  background: rgba(69, 27, 220, 1);
   text-align: center;
   vertical-align: middle;
   height: 1rem;
@@ -383,7 +383,7 @@ span.swiper-pagination-bullet {
   opacity: 0.5;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: linear-gradient(180deg, #85c1a3 0%, rgb(42, 157, 143) 100%);
+  background: rgba(221, 24, 31, 1);
   opacity: 1;
 }
 

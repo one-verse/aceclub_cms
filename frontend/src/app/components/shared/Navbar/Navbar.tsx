@@ -18,7 +18,7 @@ const Navbar = ({
   logo,
   items,
   navRHS,
-  support
+  support,
 }: {
   logo: any;
   items: NavItem[];
@@ -41,7 +41,7 @@ const Navbar = ({
                 width={50}
                 height={50}
                 src={strapiImage(logo.url)}
-                alt="OneTrade Logo"
+                alt="Calling Station"
                 className="max-w-48 md:max-w-64 h-auto"
               />
             </Link>
@@ -71,9 +71,11 @@ const Navbar = ({
                   <GreenBtn
                     title={item.title}
                     url={
-                      /Mobi|Android/i.test(navigator.userAgent)
-                      ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
-                      : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
+                      /iPad|iPhone|iPod/.test(window.navigator.userAgent)
+                        ? "https://apps.apple.com/us/app/calling-station-game/id1529711235"
+                        : /Android/i.test(window.navigator.userAgent)
+                        ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
+                        : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
                     }
                     target={item.target}
                   />
@@ -114,7 +116,7 @@ const Navbar = ({
           </div>
         )}
 
-        {/* Mobile Menu */}
+        {/* ✅ Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden mt-1 space-y-2 bgTheme absolute w-full px-5 py-8 left-0 top-30">
             <ul className="flex flex-col space-y-3">
@@ -126,6 +128,7 @@ const Navbar = ({
                     className={`block roboto-normal ${
                       isActive(el.link) ? "active-link" : ""
                     }`}
+                    onClick={() => setMenuOpen(false)} // ✅ CLOSE MENU ON LINK CLICK
                   >
                     {el.title}
                   </Link>
@@ -136,15 +139,17 @@ const Navbar = ({
         )}
       </header>
 
-      {/* Fixed Mobile Download Button */}
+      {/* ✅ Fixed Mobile Download Button */}
       {navRHS.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
           <GreenBtn
             title={navRHS[0].title}
             url={
-              /Mobi|Android/i.test(navigator.userAgent)
-          ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
-          : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
+              /iPad|iPhone|iPod/.test(window.navigator.userAgent)
+                ? "https://apps.apple.com/us/app/calling-station-game/id1529711235"
+                : /Android/i.test(window.navigator.userAgent)
+                ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
+                : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
             }
             target={navRHS[0].target}
           />
