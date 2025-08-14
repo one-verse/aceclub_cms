@@ -1,24 +1,23 @@
 {
-  "collectionName": "components_shared_nav_items",
+  "collectionName": "components_dynamic_zone_bonus_sliders",
   "info": {
-    "displayName": "NavItems",
-    "icon": "exit",
+    "displayName": "BonusSlider",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "items": {
+    "allBonus": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.cta"
+      "component": "shared.bonus-slide-item"
     },
-    "NavRHS": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.cta"
-    },
-    "footerTitleNav": {
+    "bonusSliderTitle": {
       "type": "text"
+    },
+    "readMore": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
     }
   }
 }

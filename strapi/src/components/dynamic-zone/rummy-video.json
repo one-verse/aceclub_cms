@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_dynamic_zone_rummy_videos",
+  "info": {
+    "displayName": "RummyVideo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "videoTitle": {
+      "type": "text"
+    },
+    "videoDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "videoThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "myRummyVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    }
+  }
+}

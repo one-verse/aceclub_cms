@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_bonus_slide_items",
+  "info": {
+    "displayName": "BonusSlideItem"
+  },
+  "options": {},
+  "attributes": {
+    "bonusTag": {
+      "type": "text"
+    },
+    "bonusTitle": {
+      "type": "text"
+    },
+    "bonusDesc": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "bonusIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bonusPackage": {
+      "type": "text"
+    }
+  }
+}

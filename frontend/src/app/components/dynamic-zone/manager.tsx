@@ -43,6 +43,18 @@ const componentMapping: { [key: string]: any } = {
   "dynamic-zone.promotions": dynamic(() =>
     import("./Promotions").then((mod) => mod.Promotions)
   ),
+  "dynamic-zone.gaming-zone": dynamic(() =>
+    import("./GamingZone").then((mod) => mod.GamingZone)
+  ),
+  "dynamic-zone.rummy-video": dynamic(() =>
+    import("./RummyVideo").then((mod) => mod.RummyVideo)
+  ),
+  "dynamic-zone.tab-trait-section": dynamic(() =>
+    import("./TabTraitSection").then((mod) => mod.TabTraitSection)
+  ),
+  "dynamic-zone.bonus-slider": dynamic(() =>
+    import("./BonusSlider").then((mod) => mod.BonusSlider)
+  ),
 };
 
 const DynamicZoneManager: React.FC<Props> = ({ dynamicZone }) => {

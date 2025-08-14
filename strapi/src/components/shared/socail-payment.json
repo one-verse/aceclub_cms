@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_socail_payments",
   "info": {
-    "displayName": "socailPayment"
+    "displayName": "socailPayment",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,10 +16,12 @@
       "repeatable": false,
       "component": "shared.nav-items"
     },
-    "payments": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav-items"
+    "copyRights": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

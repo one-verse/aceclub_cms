@@ -395,6 +395,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         "dynamic-zone.carousel",
         "dynamic-zone.traits-grid",
         "dynamic-zone.our-premier",
+        "dynamic-zone.gaming-zone",
       ]
     >;
     excerpt: Schema.Attribute.Text;
@@ -551,6 +552,21 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "dynamic-zone.why-choose-us",
         "dynamic-zone.our-premier",
         "dynamic-zone.promotions",
+        "dynamic-zone.gaming-zone",
+        "dynamic-zone.rummy-video",
+        "shared.tab-row-item",
+        "dynamic-zone.tab-trait-section",
+        "shared.trait",
+        "shared.socail-payment",
+        "shared.slide",
+        "shared.questions",
+        "shared.promotion",
+        "shared.nav-items",
+        "shared.footer",
+        "shared.cta",
+        "shared.bronze-vip",
+        "shared.bonus-slide-item",
+        "dynamic-zone.bonus-slider",
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

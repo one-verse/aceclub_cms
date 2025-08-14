@@ -25,9 +25,9 @@ export const FAQSection = ({ sectionTitle, question_answers }: FAQSectionProps) 
   );
 
   return (
-    <section id="faq" className="scroll-mt-24">
+    <section id="faq" className="faqRow scroll-mt-24">
       <div className="text-white py-2 px-4">
-        <p className="text-2xl md:text-4xl text-center mb-8 arial-regular">
+        <p className="text-2xl md:text-4xl text-center mb-8">
           {sectionTitle}
         </p>
         <div className="container max-w-[1200px] mx-auto">
@@ -35,7 +35,7 @@ export const FAQSection = ({ sectionTitle, question_answers }: FAQSectionProps) 
             {uniqueFaqs.map((faq, index) => (
               <div
                 key={index}
-                className={`faq p-3 md:p-3 rounded-xl bgFaq mb-3 transition-all duration-300 ${
+                className={`faq p-3 md:p-3 bgFaq mb-3 transition-all duration-300 ${
                   activeIndex === index ? "active" : ""
                 }`}
               >

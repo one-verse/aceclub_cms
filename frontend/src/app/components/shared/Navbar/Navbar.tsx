@@ -38,10 +38,10 @@ const Navbar = ({
           <div className="navbar-brand">
             <Link href="/">
               <Image
-                width={50}
-                height={50}
+                width={168}
+                height={32}
                 src={strapiImage(logo.url)}
-                alt="Calling Station"
+                alt="Rummy777"
                 className="max-w-48 md:max-w-64 h-auto"
               />
             </Link>
@@ -109,13 +109,6 @@ const Navbar = ({
           </button>
         </nav>
 
-        {/* ✅ Dynamic Support Box */}
-        {support && (
-          <div className="supportBox">
-            <p>{support}</p>
-          </div>
-        )}
-
         {/* ✅ Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden mt-1 space-y-2 bgTheme absolute w-full px-5 py-8 left-0 top-30">
@@ -146,7 +139,7 @@ const Navbar = ({
             title={navRHS[0].title}
             url={
               /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                ? "https://apps.apple.com/us/app/calling-station-game/id1529711235"
+                ? "https://apps.apple.com/in/app/calling-station-poker-game/id6747385318"
                 : /Android/i.test(window.navigator.userAgent)
                 ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
                 : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"

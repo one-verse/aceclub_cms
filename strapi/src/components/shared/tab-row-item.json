@@ -1,28 +1,30 @@
 {
-  "collectionName": "components_dynamic_zone_traits_grids",
+  "collectionName": "components_shared_tab_row_items",
   "info": {
-    "displayName": "TraitsGrid",
-    "icon": "crown",
-    "description": ""
+    "displayName": "TabRowItem"
   },
   "options": {},
   "attributes": {
-    "sectionTitle": {
+    "tabBtnTitle": {
       "type": "text"
     },
-    "sectionDescription": {
+    "tabDescTitle": {
+      "type": "text"
+    },
+    "greenTag": {
+      "type": "text"
+    },
+    "orangeTag": {
+      "type": "text"
+    },
+    "tabDescContent": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "traits": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.trait"
-    },
-    "afterBgImg": {
+    "tabRelatedImg": {
       "allowedTypes": [
         "images"
       ],

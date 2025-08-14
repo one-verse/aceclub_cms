@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dynamic_zone_tab_trait_sections",
+  "info": {
+    "displayName": "TabTraitSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TabTraitTitle": {
+      "type": "text"
+    },
+    "tabDetails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tab-row-item"
+    }
+  }
+}

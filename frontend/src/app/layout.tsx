@@ -60,7 +60,7 @@ export default async function RootLayout({
             s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script');
 
-            fbq('init', '24174197078837517');
+            fbq('init', '1331476121500963');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -69,7 +69,7 @@ export default async function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=24174197078837517&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1331476121500963&ev=PageView&noscript=1"
           />
         </noscript>
 

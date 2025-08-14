@@ -6,44 +6,17 @@
   },
   "options": {},
   "attributes": {
-    "footerLogo": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "footerCopyRight": {
-      "type": "text"
-    },
-    "socialLinks": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav-items"
-    },
     "Info": {
       "type": "component",
       "repeatable": false,
       "component": "shared.nav-items"
-    },
-    "footerWarning": {
-      "type": "text"
     },
     "Game": {
       "type": "component",
       "repeatable": false,
       "component": "shared.nav-items"
     },
-    "socialMedia": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav-items"
-    },
-    "DownloadItem": {
+    "support": {
       "type": "component",
       "repeatable": false,
       "component": "shared.nav-items"
@@ -52,6 +25,19 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.socail-payment"
+    },
+    "banStates": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "bronzeVip": {
+      "displayName": "bronzeVip",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.bronze-vip"
     }
   }
 }
