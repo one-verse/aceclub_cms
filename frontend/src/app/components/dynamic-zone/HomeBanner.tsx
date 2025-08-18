@@ -1,0 +1,129 @@
+"use client";
+import clsx from "clsx";
+import Image from "next/image";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { strapiImage } from "../../../../lib/strapi/strapiImage";
+import Link from "next/link";
+
+interface HomeSliderItem {
+  id: number;
+  bannerSliderImg: {
+    id: number;
+    url: string;
+    width: number;
+    height: number;
+    name?: string;
+  };
+}
+interface BannerItemDetail {
+  id: number;
+  bannerItemTitle: string;
+  bannerItemDesc: string;
+}
+
+interface HomeBannerType {
+  bannerTitle:string;
+  bannerSubTitle:string;
+  bannerTrust:string;
+  homeSlider?: HomeSliderItem[];
+  bannerItemDetail?:BannerItemDetail[];
+  downloadApp?:{
+    link:string;
+    target?:string;
+    socialIcon?: {
+      url:string;
+    }
+  };
+}
+
+export const HomeBanner = (props: HomeBannerType) => {
+  return (
+    <section className="homeBanner">
+      {/* Slider + Content */}
+      <div
+        className={clsx( "container max-w-6xl mx-auto", props.homeSlider ? "flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-0" : "p-4")}>
+        {/* Slider */}
+        <div className="homeBannerSlider w-full md:w-1/2 order-1 md:order-2">
+          {props.homeSlider && props.homeSlider.length > 0 && (
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+            >
+              {props.homeSlider.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  {slide.bannerSliderImg?.url && (
+                    <Image
+                      src={strapiImage(slide.bannerSliderImg.url)}
+                      width={slide.bannerSliderImg.width || 500}
+                      height={slide.bannerSliderImg.height || 300}
+                      alt={slide.bannerSliderImg.name || "Slide Image"}
+                      className="mx-auto"
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
+        </div>
+
+
+        {/* Content */}
+        <div className={clsx( "w-full", props.homeSlider ? "md:w-1/2" : "md:w-11/12", "homeBannerCnt order-2 md:order-1" )}>
+          <div className="bannerTitle">
+            <h1>{props.bannerTitle}</h1>
+            <h3>{props.bannerSubTitle}</h3>
+          </div>
+          <div className="bannerForm">
+            <form className="flex items-center justify-start gap-3">
+              <div className="inputDiv">
+                <input type="number" placeholder="Enter your mobile number" />
+              </div>
+              <div className="getSms">
+                <button type="button">Get SMS with Download link</button>
+              </div>
+            </form>
+          </div>
+          <div className="trustSection">
+            <div dangerouslySetInnerHTML={{ __html: props.bannerTrust }}></div>
+            {props.downloadApp && props.downloadApp.socialIcon && (
+                <Link
+                  className="inline-block"
+                  href={props.downloadApp.link}
+                >
+                  <Image
+                      src={strapiImage(props.downloadApp.socialIcon.url)}
+                      alt=""
+                      width={150}
+                      height={44}
+                      className="mx-auto"
+                    />
+                </Link>
+              )}
+          </div>
+          {props.bannerItemDetail && props.bannerItemDetail.length > 0 && (
+          <div className="bannerItemDetail flex align-center justify-between">
+            {props.bannerItemDetail.map((item)=> (
+              <div key={item.id}  className="bannerItem">
+              <h4>{item.bannerItemTitle}</h4>
+              <div className="text-theme" dangerouslySetInnerHTML={{ __html: item.bannerItemDesc }}></div>
+            </div>
+            ))}
+          </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HomeBanner;

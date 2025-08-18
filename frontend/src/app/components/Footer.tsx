@@ -105,7 +105,6 @@ export default function Footer({ FooterData }: { FooterData: any }) {
                 </Link>
               ))}
             </div>
-
             {/* Social Icons (always 1 column — spans full row on md) */}
             <div className="col-span-2 md:col-span-2 lg:col-span-2">
               <div className="flex flex-wrap flex-col gap-3 socialFooter">

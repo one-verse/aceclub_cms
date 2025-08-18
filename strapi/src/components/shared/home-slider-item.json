@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_home_slider_items",
+  "info": {
+    "displayName": "homeSliderItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bannerSliderImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

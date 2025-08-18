@@ -117,6 +117,28 @@ export interface DynamicZoneGamingZone extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneHomeBanner extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_home_banners";
+  info: {
+    description: "";
+    displayName: "HomeBanner";
+  };
+  attributes: {
+    bannerItemDetail: Schema.Attribute.Component<"shared.banner-detail", true>;
+    bannerSubTitle: Schema.Attribute.Text;
+    bannerTitle: Schema.Attribute.Text;
+    bannerTrust: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    downloadApp: Schema.Attribute.Component<"shared.cta", false>;
+    homeSlider: Schema.Attribute.Component<"shared.home-slider-item", true>;
+  };
+}
+
 export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
   collectionName: "components_dynamic_zone_mega_sections";
   info: {
@@ -156,6 +178,17 @@ export interface DynamicZoneOurPremier extends Struct.ComponentSchema {
       >;
     sectionTitle: Schema.Attribute.Text;
     traits: Schema.Attribute.Component<"shared.trait", true>;
+  };
+}
+
+export interface DynamicZonePlayersReviews extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_players_reviews";
+  info: {
+    displayName: "PlayersReviews";
+  };
+  attributes: {
+    mainTitle: Schema.Attribute.Text;
+    ReviewItem: Schema.Attribute.Component<"shared.player-rating-item", true>;
   };
 }
 
@@ -265,6 +298,24 @@ export interface SeoSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBannerDetail extends Struct.ComponentSchema {
+  collectionName: "components_shared_banner_details";
+  info: {
+    description: "";
+    displayName: "bannerDetail";
+  };
+  attributes: {
+    bannerItemDesc: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    bannerItemTitle: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedBonusSlideItem extends Struct.ComponentSchema {
   collectionName: "components_shared_bonus_slide_items";
   info: {
@@ -347,6 +398,19 @@ export interface SharedFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHomeSliderItem extends Struct.ComponentSchema {
+  collectionName: "components_shared_home_slider_items";
+  info: {
+    description: "";
+    displayName: "homeSliderItem";
+  };
+  attributes: {
+    bannerSliderImg: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+  };
+}
+
 export interface SharedNavItems extends Struct.ComponentSchema {
   collectionName: "components_shared_nav_items";
   info: {
@@ -358,6 +422,27 @@ export interface SharedNavItems extends Struct.ComponentSchema {
     footerTitleNav: Schema.Attribute.Text;
     items: Schema.Attribute.Component<"shared.cta", true>;
     NavRHS: Schema.Attribute.Component<"shared.cta", true>;
+  };
+}
+
+export interface SharedPlayerRatingItem extends Struct.ComponentSchema {
+  collectionName: "components_shared_player_rating_items";
+  info: {
+    displayName: "PlayerRatingItem";
+  };
+  attributes: {
+    PlayerDetails: Schema.Attribute.Text;
+    PlayerImage: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+    QuoteIcon: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    RatingDescription: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
   };
 }
 
@@ -504,19 +589,24 @@ declare module "@strapi/strapi" {
       "dynamic-zone.content-block": DynamicZoneContentBlock;
       "dynamic-zone.faq-section": DynamicZoneFaqSection;
       "dynamic-zone.gaming-zone": DynamicZoneGamingZone;
+      "dynamic-zone.home-banner": DynamicZoneHomeBanner;
       "dynamic-zone.mega-section": DynamicZoneMegaSection;
       "dynamic-zone.our-premier": DynamicZoneOurPremier;
+      "dynamic-zone.players-reviews": DynamicZonePlayersReviews;
       "dynamic-zone.promotions": DynamicZonePromotions;
       "dynamic-zone.rummy-video": DynamicZoneRummyVideo;
       "dynamic-zone.tab-trait-section": DynamicZoneTabTraitSection;
       "dynamic-zone.traits-grid": DynamicZoneTraitsGrid;
       "dynamic-zone.why-choose-us": DynamicZoneWhyChooseUs;
       "seo.seo": SeoSeo;
+      "shared.banner-detail": SharedBannerDetail;
       "shared.bonus-slide-item": SharedBonusSlideItem;
       "shared.bronze-vip": SharedBronzeVip;
       "shared.cta": SharedCta;
       "shared.footer": SharedFooter;
+      "shared.home-slider-item": SharedHomeSliderItem;
       "shared.nav-items": SharedNavItems;
+      "shared.player-rating-item": SharedPlayerRatingItem;
       "shared.promotion": SharedPromotion;
       "shared.questions": SharedQuestions;
       "shared.slide": SharedSlide;

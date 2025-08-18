@@ -567,6 +567,11 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "shared.bronze-vip",
         "shared.bonus-slide-item",
         "dynamic-zone.bonus-slider",
+        "shared.player-rating-item",
+        "dynamic-zone.players-reviews",
+        "shared.home-slider-item",
+        "shared.banner-detail",
+        "dynamic-zone.home-banner",
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

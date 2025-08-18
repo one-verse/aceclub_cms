@@ -55,6 +55,12 @@ const componentMapping: { [key: string]: any } = {
   "dynamic-zone.bonus-slider": dynamic(() =>
     import("./BonusSlider").then((mod) => mod.BonusSlider)
   ),
+  "dynamic-zone.players-reviews": dynamic(() =>
+    import("./PlayersReviews").then((mod) => mod.PlayersReviews)
+  ),
+  "dynamic-zone.home-banner": dynamic(() =>
+    import("./HomeBanner").then((mod) => mod.HomeBanner)
+  ),
 };
 
 const DynamicZoneManager: React.FC<Props> = ({ dynamicZone }) => {

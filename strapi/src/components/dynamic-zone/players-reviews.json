@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dynamic_zone_players_reviews",
+  "info": {
+    "displayName": "PlayersReviews"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "text"
+    },
+    "ReviewItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.player-rating-item"
+    }
+  }
+}

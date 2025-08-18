@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_player_rating_items",
+  "info": {
+    "displayName": "PlayerRatingItem"
+  },
+  "options": {},
+  "attributes": {
+    "QuoteIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "RatingDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "PlayerImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "PlayerDetails": {
+      "type": "text"
+    }
+  }
+}
