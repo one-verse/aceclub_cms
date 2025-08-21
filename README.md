@@ -1,4 +1,4 @@
-# CMS Monorepo for ACE CLUB POKER Website
+# CMS Monorepo for Sniper Poker Website
 
 ## BACKEND
 
