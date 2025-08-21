@@ -24,7 +24,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
                 src={strapiImage(logoUrl)}
                 alt="Footer Logo"
                 className="mx-auto mb-4"
-                width={502}
+                width={150}
                 height={60}
               />
             </Link>

@@ -32,10 +32,10 @@ const Navbar = ({
           <div className="navbar-brand">
             <Link href="/">
               <Image
-                width={251}
+                width={150}
                 height={60}
                 src={strapiImage(logo.url)}
-                alt="OneTrade Logo"
+                alt="Snniper Poker"
                 className="max-w-48 md:max-w-64 h-auto"
               />
             </Link>
