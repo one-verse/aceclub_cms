@@ -58,7 +58,7 @@ export const TabTraitSection = ({ TabTraitTitle, tabDetails }: TabTraitSectionTy
             </div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 order-2 md:order-1">
+            <div className="tabCntBox w-full md:w-1/2 order-2 md:order-1">
               <div>
                 <h3 className="text-xl font-bold mb-4">
                   {tabDetails[activeIndex].tabDescTitle}

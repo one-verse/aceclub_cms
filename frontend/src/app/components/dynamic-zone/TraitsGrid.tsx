@@ -16,7 +16,7 @@ export const TraitsGrid = (props: any) => {
       )}
       {/* Header */}
       <div className="mb-10 text-left container mx-auto max-w-[1200px] px-4">
-        <h2 className="font-sans text-2xl md:text-2xl">
+        <h2 className="text-2xl md:text-2xl">
           {props.sectionTitle || ""}
         </h2>
         {props.sectionDescription && (
@@ -34,15 +34,24 @@ export const TraitsGrid = (props: any) => {
               key={index}
               className="flex-shrink-0 w-[25%] sm:w-[18%] md:w-[14%] flex flex-col items-center text-center"
             >
-              <Image
-                src={strapiImage(feature.icon.url)}
-                width={100}
-                height={100}
-                alt={feature.icon.alternativeText || ""}
-                className="mb-4 h-auto max-w-full featureIcon"
-              />
+              {/* <div className="relative w-[100px] h-[100px]">
+                <Image
+                  src={strapiImage(feature.icon.url)}
+                  fill
+                  alt={feature.icon.alternativeText || ""}
+                  className="mb-4 h-auto max-w-full featureIcon"
+                />
+              </div> */}
+              <div className="featureIcon w-[101px] h-[101px]">
+                <Image
+                  src={strapiImage(feature.icon.url)}
+                  alt={feature.icon.alternativeText || ""}
+                  fill
+                  className="object-contain"
+                />
+              </div>
               {/* <p className="text-light-gray mb-1 text-sm md:text-xl">{feature.title}</p> */}
-              <div className="text-white poppins-normal text-xs md:text-sm leading-normal">
+              <div className="text-theme text-xs md:text-sm featureText">
                 <ContentBlock content={feature.description} />
               </div>
             </div>

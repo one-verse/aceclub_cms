@@ -77,11 +77,11 @@ export default async function RootLayout({
 
         <Footer FooterData={pageData.footer} />
 
-        {/* <Script
-          src="https://launchers.bonb.io/support.js?id=PzJlM3EkiS"
+        <Script
+          src="https://launchers.bonb.io/support.js?id=qWXk1BS2XX"
           strategy="afterInteractive"
           defer
-        /> */}
+        />
         
       </body>
     </html>

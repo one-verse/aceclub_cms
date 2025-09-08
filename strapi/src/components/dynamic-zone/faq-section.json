@@ -14,6 +14,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::question-answer.question-answer"
+    },
+    "viewFaq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
     }
   }
 }

@@ -45,7 +45,7 @@ export const MegaSection = (props: MegaSectionType) => {
 
           {props.PlayButton && props.PlayButton.title && (
             <Link
-              className="btn primary-green text-black font-medium text-sm px-5 py-2.5 text-center w-50 mt-6 inline-block"
+              className="normalBtn"
               href={props.PlayButton.link}
             >
               {props.PlayButton.title}

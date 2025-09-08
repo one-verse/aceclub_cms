@@ -14,14 +14,14 @@ export const RummyVideo = (props: any) => {
     <section
       className="rummyVideoRow"
     >
-     <div className="videoContainr max-w-6xl mx-auto">
+     <div className="videoContainer max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-2xl md:text-3xl mb-4 text-white">
+          <h2 className="text-theme">
             {props.videoTitle || ""}
           </h2>
           {props.videoDescription && (
-            <div className="text-theme mx-auto mt-4 max-w-3xl" dangerouslySetInnerHTML={{ __html: props.videoDescription }}>
+            <div className="text-theme mx-auto  max-w-5xl" dangerouslySetInnerHTML={{ __html: props.videoDescription }}>
             </div>
           )}
         </div>

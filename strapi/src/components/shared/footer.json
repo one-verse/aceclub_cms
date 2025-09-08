@@ -38,6 +38,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.bronze-vip"
+    },
+    "footerPotImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

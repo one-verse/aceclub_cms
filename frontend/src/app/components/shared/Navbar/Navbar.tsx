@@ -32,7 +32,7 @@ const Navbar = ({
 
   return (
     <>
-      <header className="h-full w-full roboto-normal p-2 md:px-20 sticky top-0 z-40 bgHeader">
+      <header className="h-full w-full roboto-normal p-3 md:px-20 sticky top-0 z-40 bgHeader">
         <nav className="flex justify-between items-center w-full">
           {/* Logo */}
           <div className="navbar-brand">
@@ -70,15 +70,12 @@ const Navbar = ({
                 <li key={item.id}>
                   <GreenBtn
                     title={item.title}
-                    url={
-                      /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                        ? "https://apps.apple.com/in/app/calling-station-poker-game/id6747385318"
-                        : /Android/i.test(window.navigator.userAgent)
-                        ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
-                        : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
-                    }
-                    target={item.target}
-                  />
+                    url={/iPad|iPhone|iPod/.test(window.navigator.userAgent)
+                      ? "#"
+                      : /Android/i.test(window.navigator.userAgent)
+                        ? "#"
+                        : "#"}
+                    target={item.target} rel={""}                  />
                 </li>
               ))}
             </ul>
@@ -137,15 +134,12 @@ const Navbar = ({
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
           <GreenBtn
             title={navRHS[0].title}
-            url={
-              /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                ? "https://apps.apple.com/in/app/calling-station-poker-game/id6747385318"
-                : /Android/i.test(window.navigator.userAgent)
-                ? "https://cdn.callingstation.co.in/releases/android/CallingStation.apk"
-                : "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe"
-            }
-            target={navRHS[0].target}
-          />
+            url={/iPad|iPhone|iPod/.test(window.navigator.userAgent)
+              ? "#"
+              : /Android/i.test(window.navigator.userAgent)
+                ? "#"
+                : "#"}
+            target={navRHS[0].target} rel={""}          />
         </div>
       )}
     </>

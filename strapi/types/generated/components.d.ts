@@ -89,6 +89,7 @@ export interface DynamicZoneFaqSection extends Struct.ComponentSchema {
       "api::question-answer.question-answer"
     >;
     sectionTitle: Schema.Attribute.Text;
+    viewFaq: Schema.Attribute.Component<"shared.cta", true>;
   };
 }
 
@@ -319,9 +320,13 @@ export interface SharedBannerDetail extends Struct.ComponentSchema {
 export interface SharedBonusSlideItem extends Struct.ComponentSchema {
   collectionName: "components_shared_bonus_slide_items";
   info: {
+    description: "";
     displayName: "BonusSlideItem";
   };
   attributes: {
+    bonusBgImg: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
     bonusDesc: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
@@ -391,6 +396,9 @@ export interface SharedFooter extends Struct.ComponentSchema {
         }
       >;
     bronzeVip: Schema.Attribute.Component<"shared.bronze-vip", false>;
+    footerPotImg: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
     footerSocial: Schema.Attribute.Component<"shared.socail-payment", false>;
     Game: Schema.Attribute.Component<"shared.nav-items", false>;
     Info: Schema.Attribute.Component<"shared.nav-items", false>;

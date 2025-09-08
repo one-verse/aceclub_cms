@@ -40,7 +40,7 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
   return (
     <section className="playersSliderRow py-10">
       {/* Title */}
-      <div className="bonusSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
+      <div className="playerSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
         <h2 className="text-2xl font-bold">{props.mainTitle}</h2>
       </div>
 
@@ -56,22 +56,24 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
                 1024: { slidesPerView: 3.2 },
               }}
               loop={true}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              // autoplay={{ delay: 3000, disableOnInteraction: false }}
               pagination={{ clickable: true }}
             >
               {props.ReviewItem.map((review) => (
                 <SwiperSlide key={review.id}>
                   <div className="reviewSlideItem">
-                    {review.QuoteIcon?.url && (
-                      <Image
-                        src={strapiImage(review.QuoteIcon.url)}
-                        alt={review.PlayerDetails}
-                        className="quoteIcon"
-                        width={18}
-                        height={18}
-                      />
-                    )}
-                    <div className="text-theme playerDesc" dangerouslySetInnerHTML={{ __html: review.RatingDescription }}></div>
+                    <div>
+                      {review.QuoteIcon?.url && (
+                        <Image
+                          src={strapiImage(review.QuoteIcon.url)}
+                          alt={review.PlayerDetails}
+                          className="quoteIcon"
+                          width={18}
+                          height={18}
+                        />
+                      )}
+                      <div className="text-theme playerDesc" dangerouslySetInnerHTML={{ __html: review.RatingDescription }}></div>
+                    </div>
                     <div className="playerDetail">
                       {review.PlayerImage?.url && (
                       <Image

@@ -22,6 +22,9 @@ interface BonusSliderItem {
     height: number;
     name?: string;
   };
+  bonusBgImg?: {
+    url: string;
+  }
   
 }
 interface ReadMoreItem {
@@ -40,7 +43,7 @@ export const BonusSlider = (props: BonusSliderProps) => {
   return (
     <section className="bonusSliderRow py-10">
       {/* Title */}
-      <div className="bonusSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
+      <div className="bonusSliderTitle max-w-6xl mx-auto flex items-center justify-center gap-3">
         <h2 className="text-2xl font-bold">{props.bonusSliderTitle}</h2>
       </div>
 
@@ -61,14 +64,23 @@ export const BonusSlider = (props: BonusSliderProps) => {
             >
               {props.allBonus.map((bonus) => (
                 <SwiperSlide key={bonus.id}>
-                  <div className={clsx("slideItemBox", bonus.bonusTag)}>
+                  <div className={clsx("slideItemBox", bonus.bonusTag)} 
+                  style={{
+                    backgroundImage: bonus.bonusBgImg?.url
+                      ? `url(${strapiImage(bonus.bonusBgImg.url)})`
+                      : "none",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                  >
                     {/* Content */}
                     <div className="text-sm bonusPackage">
                       <span>{bonus.bonusPackage}</span>
                     </div>
                     <div className="slideDesc">
                       <h3>{bonus.bonusTitle}</h3>
-                      <div className="text-gray-700 mb-3" dangerouslySetInnerHTML={{ __html: bonus.bonusDesc }}>
+                      <div className="text-theme" dangerouslySetInnerHTML={{ __html: bonus.bonusDesc }}>
                       </div>
                     </div>
                     {/* Image */}
@@ -90,7 +102,7 @@ export const BonusSlider = (props: BonusSliderProps) => {
      {readMoreData?.title && (
       <div className="readBtn text-center">
         <Link
-          className="btn primary-green text-black font-medium text-sm px-5 py-2.5 text-center w-50 mt-6 inline-block"
+          className="normalBtn inline-block"
           href={readMoreData.link}
         >
           {readMoreData.title}
