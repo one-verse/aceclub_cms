@@ -497,6 +497,7 @@ section.variant-theme {
   position: absolute;
   top: -90px;
   right: 0;
+  max-width: 300px;
 }
 .socialItemBox {
   position: relative;

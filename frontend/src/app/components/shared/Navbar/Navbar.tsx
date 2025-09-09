@@ -70,11 +70,7 @@ const Navbar = ({
                 <li key={item.id}>
                   <GreenBtn
                     title={item.title}
-                    url={/iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                      ? "https://www.rummy777.com/downloads/rummy777.apk"
-                      : /Android/i.test(window.navigator.userAgent)
-                        ? "https://www.rummy777.com/downloads/rummy777.apk"
-                        : "https://www.rummy777.com/downloads/rummy777.apk"}
+                    url={item.link}
                     target={item.target} rel={""}                  />
                 </li>
               ))}
@@ -132,14 +128,18 @@ const Navbar = ({
       {/* ✅ Fixed Mobile Download Button */}
       {navRHS.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
-          <GreenBtn
+          {/* <GreenBtn
             title={navRHS[0].title}
             url={/iPad|iPhone|iPod/.test(window.navigator.userAgent)
               ? "https://www.rummy777.com/downloads/rummy777.apk"
               : /Android/i.test(window.navigator.userAgent)
                 ? "https://www.rummy777.com/downloads/rummy777.apk"
                 : "https://www.rummy777.com/downloads/rummy777.apk"}
-            target={navRHS[0].target} rel={""}          />
+            target={navRHS[0].target} rel={""} /> */}
+            <GreenBtn
+            title={navRHS[0].title}
+            url={navRHS[0].link}
+            target={navRHS[0].target} rel={""} />
         </div>
       )}
     </>

@@ -36,6 +36,7 @@ interface HomeBannerType {
   bannerItemDetail?:BannerItemDetail[];
   downloadApp?:{
     link:string;
+    title:string;
     target?:string;
     socialIcon?: {
       url:string;
@@ -157,17 +158,27 @@ export const HomeBanner = (props: HomeBannerType) => {
             </form>
           </div> */}
           <div className="getSms">
+          {props.downloadApp && props.downloadApp.socialIcon && (
           <GreenBtn
-              title="Download Now"
-              url={
-                /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                  ? "https://www.rummy777.com/downloads/rummy777.apk"
-                  : /Android/i.test(window.navigator.userAgent)
-                  ? "https://www.rummy777.com/downloads/rummy777.apk"
-                  : "https://www.rummy777.com/downloads/rummy777.apk"
-              }
+              title={props.downloadApp.title}
+              url={props.downloadApp.link}
               target="_blank"
             />
+            )}
+            {/* {props.downloadApp && props.downloadApp.socialIcon && (
+                <Link
+                  className="inline-block"
+                  href={props.downloadApp.link}
+                >
+                  <Image
+                      src={strapiImage(props.downloadApp.socialIcon.url)}
+                      alt=""
+                      width={150}
+                      height={44}
+                      className="mx-auto"
+                    />
+                </Link>
+              )} */}
             </div>
           <div className="trustSection">
             <div dangerouslySetInnerHTML={{ __html: props.bannerTrust }}></div>
