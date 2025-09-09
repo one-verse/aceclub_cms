@@ -32,7 +32,7 @@ export const TraitsGrid = (props: any) => {
           {props.traits.map((feature: any, index: number) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[25%] sm:w-[18%] md:w-[14%] flex flex-col items-center text-center"
+              className="flex-shrink-0 w-[100%] sm:w-[28%] md:w-[14%] flex flex-col items-center text-center"
             >
               {/* <div className="relative w-[100px] h-[100px]">
                 <Image

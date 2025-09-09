@@ -30,6 +30,32 @@ export default function Footer({ FooterData }: { FooterData: any }) {
 
   return (
     <footer>
+      <div className="bronzeFooter pt-10 pb-20 md:py-10 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+
+            {/* Left column — Title & Text */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4">{bronzeVip.bronzeTitle}</h2>
+              <div
+                className="text-base leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: bronzeVip.bronzeText }}
+              ></div>
+            </div>
+
+            {/* Right column — Icon */}
+            <div className="flex justify-center sm:justify-end">
+              {bronzeVip?.bronzeIcon?.url && (
+                <img
+                  src={strapiImage(bronzeVip.bronzeIcon.url)}
+                  alt="Bronze VIP"
+                  className="w-full max-w-xs"
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="footerBg pt-10 pb-20 md:py-10 px-4 text-white">
         <div className="max-w-6xl mx-auto text-center">
           {/* ✅ Grid Layout for lg (5 col), md (2 col + full), sm (1 col) */}
@@ -161,32 +187,6 @@ export default function Footer({ FooterData }: { FooterData: any }) {
             )}
         </div>
       </div> */}
-      <div className="bronzeFooter pt-10 pb-20 md:py-10 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-
-            {/* Left column — Title & Text */}
-            <div>
-              <h2 className="text-2xl font-bold mb-4">{bronzeVip.bronzeTitle}</h2>
-              <div
-                className="text-base leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: bronzeVip.bronzeText }}
-              ></div>
-            </div>
-
-            {/* Right column — Icon */}
-            <div className="flex justify-center sm:justify-end">
-              {bronzeVip?.bronzeIcon?.url && (
-                <img
-                  src={strapiImage(bronzeVip.bronzeIcon.url)}
-                  alt="Bronze VIP"
-                  className="w-full max-w-xs"
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 }

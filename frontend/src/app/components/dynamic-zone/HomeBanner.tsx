@@ -161,10 +161,10 @@ export const HomeBanner = (props: HomeBannerType) => {
               title="Download Now"
               url={
                 /iPad|iPhone|iPod/.test(window.navigator.userAgent)
-                  ? "#"
+                  ? "https://www.rummy777.com/downloads/rummy777.apk"
                   : /Android/i.test(window.navigator.userAgent)
-                  ? "#"
-                  : "#"
+                  ? "https://www.rummy777.com/downloads/rummy777.apk"
+                  : "https://www.rummy777.com/downloads/rummy777.apk"
               }
               target="_blank"
             />
