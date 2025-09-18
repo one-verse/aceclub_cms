@@ -595,7 +595,7 @@ export interface ApiQuestionAnswerQuestionAnswer
     singularName: "question-answer";
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     answer: Schema.Attribute.RichText &

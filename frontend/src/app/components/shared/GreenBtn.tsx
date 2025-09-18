@@ -2,6 +2,7 @@ import Link from "next/link";
 export default function GreenBtn({
   title,
   url,
+  target,
 }: {
   title: string;
   url: string;
@@ -13,7 +14,7 @@ export default function GreenBtn({
       <Link
         className="block md:inline-block btn primary-green text-black font-medium text-sm px-5 py-2.5  text-center"
         href={url}
-        target="_blank"
+        target={target}
         rel="noopener noreferrer"
       >
         {title}
