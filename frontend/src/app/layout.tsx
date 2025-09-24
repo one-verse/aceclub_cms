@@ -48,7 +48,8 @@ export default async function RootLayout({
         />
         <main className="">{children}</main>
         <Footer FooterData={pageData.footer} />
-        <Script src="https://launchers.bonb.io/support.js?id=BQPIA5MFLr" defer></Script>
+        {/* <Script src="https://launchers.bonb.io/support.js?id=BQPIA5MFLr" defer></Script> */}
+        <script src="https://launchers.bonb.io/support.js?id=-IRvIAxNzt" defer></script>
       </body>
     </html>
   );
