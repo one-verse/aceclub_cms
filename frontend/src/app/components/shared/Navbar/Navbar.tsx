@@ -46,11 +46,12 @@ const Navbar = ({ logo }: { logo: any }) => {
     { title: "Contact Us / Support", link: "/contact" },
   ];
 
+  // ✅ Dynamic “Download Now” button from Strapi (fallback included)
   const navRHS = [
     {
-      title: "Download Now",
-      link: "/download",
-      target: "_self",
+      title: logo?.downloadButton?.title || "Download Now",
+      link: logo?.downloadButton?.link || "/download",
+      target: logo?.downloadButton?.target || "_self",
     },
   ];
 
@@ -60,7 +61,7 @@ const Navbar = ({ logo }: { logo: any }) => {
         <nav className="flex justify-between items-center w-full relative">
           {/* ✅ Dynamic Logo */}
           <div className="navbar-brand">
-            <Link href="/">
+            <Link href="/" aria-label="Home">
               <Image
                 width={150}
                 height={60}
@@ -75,14 +76,35 @@ const Navbar = ({ logo }: { logo: any }) => {
           <div className="hidden md:flex items-center space-x-5">
             <ul className="flex space-x-5 items-center">
               {navItems.map((item, ind) => (
-                <li key={ind} className="relative group">
-                  <Link href={item.link} className="roboto-normal">
+                <li
+                  key={ind}
+                  className="relative group"
+                  aria-haspopup={!!item.submenu}
+                >
+                  <Link
+                    href={item.link || "#"}
+                    className="roboto-normal cursor-pointer"
+                    aria-expanded="false"
+                    onClick={
+                      item.submenu
+                        ? (e) => e.preventDefault() // Prevent click if submenu exists
+                        : undefined
+                    }
+                  >
                     {item.title}
                   </Link>
 
-                  {/* ✅ Fixed Submenu (hover friendly) */}
+                  {/* ✅ Hover-friendly Submenu */}
                   {item.submenu && (
-                    <ul className="absolute left-0 top-full mt-2 p-3 rounded-lg shadow-lg min-w-[220px] bgTheme space-y-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-30">
+                    <ul
+                      className="
+                        absolute left-0 top-full mt-2 p-3 rounded-lg shadow-lg 
+                        min-w-[220px] bgTheme space-y-2 opacity-0 
+                        group-hover:opacity-100 pointer-events-none 
+                        group-hover:pointer-events-auto transition-all 
+                        duration-200 ease-in-out z-30 submenu
+                      "
+                    >
                       {item.submenu.map((sub, i) => (
                         <li key={i}>
                           <Link
@@ -107,6 +129,11 @@ const Navbar = ({ logo }: { logo: any }) => {
                     title={btn.title}
                     url={btn.link}
                     target={btn.target}
+                    rel={
+                      btn.target === "_blank"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                   />
                 </li>
               ))}
@@ -117,6 +144,7 @@ const Navbar = ({ logo }: { logo: any }) => {
           <button
             className="md:hidden flex items-center text-white"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle Menu"
           >
             <svg
               className="w-6 h-6"
@@ -140,11 +168,11 @@ const Navbar = ({ logo }: { logo: any }) => {
 
         {/* ✅ Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-1 space-y-2 bgTheme absolute w-full px-5 py-8 left-0 top-30 z-40">
+          <div className="md:hidden mt-1 space-y-2 bgTheme absolute w-full px-5 py-8 left-0 top-[120px] z-40">
             <ul className="flex flex-col space-y-3">
               {navItems.map((item, ind) => (
                 <li key={ind}>
-                  <Link href={item.link} className="block roboto-normal">
+                  <Link href={item.link || "#"} className="block roboto-normal">
                     {item.title}
                   </Link>
 
@@ -169,13 +197,16 @@ const Navbar = ({ logo }: { logo: any }) => {
         )}
       </header>
 
-      {/* ✅ Fixed Mobile Button */}
+      {/* ✅ Fixed Mobile Download Button */}
       {navRHS.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
           <GreenBtn
             title={navRHS[0].title}
             url={navRHS[0].link}
             target={navRHS[0].target}
+            rel={
+              navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined
+            }
           />
         </div>
       )}
