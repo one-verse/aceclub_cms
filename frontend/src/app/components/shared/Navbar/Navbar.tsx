@@ -6,9 +6,23 @@ import Link from "next/link";
 import GreenBtn from "../GreenBtn";
 import { strapiImage } from "../../../../../lib/strapi/strapiImage";
 
-const Navbar = ({ logo }: { logo: any }) => {
+interface NavItem {
+  id?: number;
+  title: string;
+  link: string;
+  target: string;
+}
+
+const Navbar = ({
+  logo,
+   navRHS,
+}: {
+  logo: any;
+  navRHS: NavItem[];
+}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // ✅ Static menu (your existing structure preserved)
   const navItems = [
     {
       title: "How to Play",
@@ -46,20 +60,12 @@ const Navbar = ({ logo }: { logo: any }) => {
     { title: "Contact Us / Support", link: "/contact" },
   ];
 
-  // ✅ Dynamic “Download Now” button from Strapi (fallback included)
-  const navRHS = [
-    {
-      title: logo?.downloadButton?.title || "Download Now",
-      link: logo?.downloadButton?.link || "/download",
-      target: logo?.downloadButton?.target || "_self",
-    },
-  ];
-
+  // ✅ Safely read NavRHS from Strapi NavigationBar
   return (
     <>
       <header className="h-full w-full roboto-normal p-2 md:px-20 sticky top-0 z-40 bgHeader">
         <nav className="flex justify-between items-center w-full relative">
-          {/* ✅ Dynamic Logo */}
+          {/* ✅ Logo */}
           <div className="navbar-brand">
             <Link href="/" aria-label="Home">
               <Image
@@ -76,35 +82,21 @@ const Navbar = ({ logo }: { logo: any }) => {
           <div className="hidden md:flex items-center space-x-5">
             <ul className="flex space-x-5 items-center">
               {navItems.map((item, ind) => (
-                <li
-                  key={ind}
-                  className="relative group"
-                  aria-haspopup={!!item.submenu}
-                >
+                <li key={ind} className="relative group" aria-haspopup={!!item.submenu}>
                   <Link
-                    href={item.link || "#"}
+                    href={item.link || "/"}
                     className="roboto-normal cursor-pointer"
-                    aria-expanded="false"
-                    onClick={
-                      item.submenu
-                        ? (e) => e.preventDefault() // Prevent click if submenu exists
-                        : undefined
-                    }
+                    onClick={item.submenu ? (e) => e.preventDefault() : undefined}
                   >
                     {item.title}
                   </Link>
 
-                  {/* ✅ Hover-friendly Submenu */}
                   {item.submenu && (
-                    <ul
-                      className="
-                        absolute left-0 top-full mt-2 p-3 rounded-lg shadow-lg 
-                        min-w-[220px] bgTheme space-y-2 opacity-0 
-                        group-hover:opacity-100 pointer-events-none 
-                        group-hover:pointer-events-auto transition-all 
-                        duration-200 ease-in-out z-30 submenu
-                      "
-                    >
+                    <ul className="absolute left-0 top-full mt-2 p-3 rounded-lg shadow-lg 
+                                    min-w-[220px] bgTheme space-y-2 opacity-0 
+                                    group-hover:opacity-100 pointer-events-none 
+                                    group-hover:pointer-events-auto transition-all 
+                                    duration-200 ease-in-out z-30">
                       {item.submenu.map((sub, i) => (
                         <li key={i}>
                           <Link
@@ -121,19 +113,15 @@ const Navbar = ({ logo }: { logo: any }) => {
               ))}
             </ul>
 
-            {/* ✅ Right Button */}
+            {/* ✅ Dynamic Download Button */}
             <ul className="flex gap-x-2">
               {navRHS.map((btn, i) => (
-                <li key={i}>
+                <li key={btn.id || i}>
                   <GreenBtn
                     title={btn.title}
                     url={btn.link}
                     target={btn.target}
-                    rel={
-                      btn.target === "_blank"
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
+                    rel={btn.target === "_blank" ? "noopener noreferrer" : undefined}
                   />
                 </li>
               ))}
@@ -175,15 +163,11 @@ const Navbar = ({ logo }: { logo: any }) => {
                   <Link href={item.link || "#"} className="block roboto-normal">
                     {item.title}
                   </Link>
-
                   {item.submenu && (
                     <ul className="ml-4 mt-1 space-y-1">
                       {item.submenu.map((sub, i) => (
                         <li key={i}>
-                          <Link
-                            href={sub.link}
-                            className="block text-sm text-gray-300"
-                          >
+                          <Link href={sub.link} className="block text-sm text-gray-300">
                             {sub.title}
                           </Link>
                         </li>
@@ -204,9 +188,7 @@ const Navbar = ({ logo }: { logo: any }) => {
             title={navRHS[0].title}
             url={navRHS[0].link}
             target={navRHS[0].target}
-            rel={
-              navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined
-            }
+            rel={navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined}
           />
         </div>
       )}
