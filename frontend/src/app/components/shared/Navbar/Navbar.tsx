@@ -92,7 +92,7 @@ const Navbar = ({
                   </Link>
 
                   {item.submenu && (
-                    <ul className="absolute left-0 top-full mt-2 p-3 rounded-lg shadow-lg 
+                    <ul className="absolute left-0 top-full p-3 rounded-lg shadow-lg 
                                     min-w-[220px] bgTheme space-y-2 opacity-0 
                                     group-hover:opacity-100 pointer-events-none 
                                     group-hover:pointer-events-auto transition-all 
