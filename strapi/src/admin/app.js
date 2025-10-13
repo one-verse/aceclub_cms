@@ -14,8 +14,8 @@ const config = {
   },
   translations: {
     en: {
-      "app.components.LeftMenu.navbrand.title": "Sniper Poker",
-      "Auth.form.welcome.subtitle": "Sniper Poker",
+      "app.components.LeftMenu.navbrand.title": "Ace Club Poker",
+      "Auth.form.welcome.subtitle": "Ace Club Poker",
       "Auth.form.welcome.title": "Admin Access",
     },
   },

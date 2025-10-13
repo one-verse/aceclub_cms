@@ -72,7 +72,7 @@ const Navbar = ({
                 width={150}
                 height={60}
                 src={strapiImage(logo?.url)}
-                alt={logo?.alternativeText || "Sniper Poker"}
+                alt={logo?.alternativeText || "Ace Club Poker"}
                 className="max-w-48 md:max-w-64 h-auto"
               />
             </Link>

@@ -5,7 +5,7 @@ export default function TellUs() {
       <div className="container max-w-[1200px] mx-auto flex content-center items-center p-4 w-full mx-auto space-x-12">
         <div className="text-left basis-1/2">
           <p className="text-7xl arial-bold">
-            Your voice matters and Sniper Poker rewards it.
+            Your voice matters and Ace Club Poker rewards it.
           </p>
           <p className="text-xl text-white my-3 roboto-normal">
             Share your predictions on sports, politics, and entertainment to
