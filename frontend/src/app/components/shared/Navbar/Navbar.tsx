@@ -57,7 +57,7 @@ const Navbar = ({
       ],
     },
     { title: "About Us", link: "/about-us" },
-    { title: "Contact Us / Support", link: "/contact" },
+    { title: "Contact Us", link: "/contact" },
   ];
 
   // ✅ Safely read NavRHS from Strapi NavigationBar
