@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import GreenBtn from "../GreenBtn";
 import { strapiImage } from "../../../../../lib/strapi/strapiImage";
+const SPARTAN_BASE = "https://gameapi.thespartanpoker.in/pokerapi/v1/website";
 
 interface NavItem {
   id?: number;
@@ -59,6 +60,35 @@ const Navbar = ({
     { title: "About Us", link: "/about-us" },
     { title: "Contact Us / Support", link: "/contact" },
   ];
+  function handleGreenBtnClick(link: string) {
+    let sessionId = Math.floor(100000000000 + Math.random() * 900000000000);
+    // const url = 'https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe?affiliateCode=dsgs';
+    const params = new URL(link).searchParams;
+    const affiliateId = params.get("affiliateCode") || "DEFAULT";
+    trackSession(affiliateId);
+  }
+
+  async function trackSession(affiliateId:any) {
+  try {
+    const response = await fetch(`${SPARTAN_BASE}/track_session`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        timestamp: new Date().toISOString(),
+          clientName:'Ace Club poker',
+          affiliateCode:affiliateId,
+          utmSource:'Ace Club poker',
+          utmMedium:'CPC',
+          utmCampaign:'utmCampaign',
+      }),
+    });
+
+    const data = await response.json();
+    console.log("API Response:", data);
+  } catch (error) {
+    console.error("Error calling API:", error);
+  }
+}
 
   // ✅ Safely read NavRHS from Strapi NavigationBar
   return (
@@ -119,9 +149,9 @@ const Navbar = ({
                 <li key={btn.id || i}>
                   <GreenBtn
                     title={btn.title}
-                    url={btn.link}
-                    target={btn.target}
+                    url={btn.link}  
                     rel={btn.target === "_blank" ? "noopener noreferrer" : undefined}
+                    onClick={() => handleGreenBtnClick(btn.link)}
                   />
                 </li>
               ))}
@@ -184,12 +214,19 @@ const Navbar = ({
       {/* ✅ Fixed Mobile Download Button */}
       {navRHS.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden px-4 py-3 footerDownload">
-          <GreenBtn
+          {/* <GreenBtn
             title={navRHS[0].title}
             url={navRHS[0].link}
             target={navRHS[0].target}
             rel={navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined}
-          />
+          /> */}
+
+          <GreenBtn
+            title={navRHS[0].title}
+            url={navRHS[0].link} 
+            rel={navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined}
+             onClick={() => handleGreenBtnClick(navRHS[0].link)}
+            />
         </div>
       )}
     </>
