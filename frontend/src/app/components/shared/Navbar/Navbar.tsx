@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import GreenBtn from "../GreenBtn";
 import { strapiImage } from "../../../../../lib/strapi/strapiImage";
-const SPARTAN_BASE = "https://gameapi.thespartanpoker.in/pokerapi/v1/website";
+const API_BASE_URL = "https://gameapi.1poker.live/pokerapi/v1/website";
 
 interface NavItem {
   id?: number;
@@ -61,7 +61,7 @@ const Navbar = ({
     { title: "Contact Us / Support", link: "/contact" },
   ];
   function handleGreenBtnClick(link: string) {
-    let sessionId = Math.floor(100000000000 + Math.random() * 900000000000);
+    // let sessionId = Math.floor(100000000000 + Math.random() * 900000000000);
     // const url = 'https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe?affiliateCode=dsgs';
     const params = new URL(link).searchParams;
     const affiliateId = params.get("affiliateCode") || "";
@@ -70,7 +70,7 @@ const Navbar = ({
 
   async function trackSession(affiliateId?: string) {
   try {
-    const response = await fetch(`${SPARTAN_BASE}/track_session`, {
+    const response = await fetch(`${API_BASE_URL}/track_session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
