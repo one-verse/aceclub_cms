@@ -20,7 +20,7 @@ const Navbar = ({
   navRHS: NavItem;
 }) => {
   return (
-    <header className="h-full w-full poppins-normal p-2 md:px-20 sticky top-0 z-40">
+    <header className="h-full w-full poppins-normal p-2 md:px-20 sticky top-0 z-40 bg-white shadow-sm">
       <nav className="flex w-full items-center space-x-4">
         <div className="navbar-brand mx-auto md:ms-0 md:me-auto">
           <Link href="https://exchange.onetrade.live">
@@ -33,6 +33,7 @@ const Navbar = ({
             />
           </Link>
         </div>
+
         {items && (
           <div className="nav-list h-full hidden md:block">
             <ul className="flex space-x-5 content-center items-center h-full p-5">
@@ -54,13 +55,17 @@ const Navbar = ({
         <div className="nav-trait hidden md:block">
           <p className="text-lg font-bold">18+ only</p>
         </div>
+
         {navRHS && (
-          <div className="nav-cta hidden md:block">
-            <ul>
-              <li>
-                <GreenBtn title={navRHS.title} url={navRHS.link} />
-              </li>
-            </ul>
+          <div className="nav-cta hidden md:flex space-x-4 items-center">
+            <GreenBtn title={navRHS.title} url={navRHS.link} />
+
+            {/* New Download Button */}
+            <Link href="/download">
+              <button className="bg-green-600 text-white px-4 py-2 rounded-xl hover:bg-green-700 transition">
+                Download App
+              </button>
+            </Link>
           </div>
         )}
       </nav>
