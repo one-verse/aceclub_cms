@@ -64,23 +64,24 @@ const Navbar = ({
     let sessionId = Math.floor(100000000000 + Math.random() * 900000000000);
     // const url = 'https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe?affiliateCode=dsgs';
     const params = new URL(link).searchParams;
-    const affiliateId = params.get("affiliateCode") || "DEFAULT";
+    const affiliateId = params.get("affiliateCode") || "";
     trackSession(affiliateId);
   }
 
-  async function trackSession(affiliateId:any) {
+  async function trackSession(affiliateId?: string) {
   try {
     const response = await fetch(`${SPARTAN_BASE}/track_session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         timestamp: new Date().toISOString(),
-          clientName:'Ace Club poker',
-          affiliateCode:affiliateId,
-          utmSource:'Ace Club poker',
+          clientName:'Sniper Poker',
+          // affiliateCode:affiliateId,
+          utmSource:'Sniper Poker',
           utmMedium:'CPC',
           utmCampaign:'utmCampaign',
       }),
+      ...(affiliateId && { affiliateCode: affiliateId }),
     });
 
     const data = await response.json();
@@ -147,12 +148,20 @@ const Navbar = ({
             <ul className="flex gap-x-2">
               {navRHS.map((btn, i) => (
                 <li key={btn.id || i}>
-                  <GreenBtn
+                  {/* <GreenBtn
                     title={btn.title}
                     url={btn.link}  
                     rel={btn.target === "_blank" ? "noopener noreferrer" : undefined}
                     onClick={() => handleGreenBtnClick(btn.link)}
-                  />
+                  /> */}
+                  {/* <GreenBtn title={btn.title} url={btn.link} /> */}
+ 
+                    {/* New Download Button */}
+                    <Link href="/api/download">
+                      <button className="block md:inline-block btn primary-green text-black font-medium text-sm px-5 py-2.5  text-center">
+                        {btn.title}
+                      </button>
+                    </Link>
                 </li>
               ))}
             </ul>
@@ -221,12 +230,17 @@ const Navbar = ({
             rel={navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined}
           /> */}
 
-          <GreenBtn
+          {/* <GreenBtn
             title={navRHS[0].title}
             url={navRHS[0].link} 
             rel={navRHS[0].target === "_blank" ? "noopener noreferrer" : undefined}
              onClick={() => handleGreenBtnClick(navRHS[0].link)}
-            />
+            /> */}
+            <Link href="/api/download" className="w-100 block">
+              <button className="w-full btn block primary-green text-black font-medium text-sm px-5 py-2.5  text-center w100">
+                {navRHS[0].title}
+              </button>
+            </Link>
         </div>
       )}
     </>
