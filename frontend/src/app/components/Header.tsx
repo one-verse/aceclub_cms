@@ -11,7 +11,7 @@ const Header = () => {
             alt="Calling Station"
             className="h-20 w-20"
           />
-          <span className="text-lg font-bold">OneTrade</span>
+          <span className="text-lg font-bold">BrunoGames</span>
         </div>
 
         {/* Navigation Links */}
@@ -19,7 +19,7 @@ const Header = () => {
           <Link href="#ExploreSection" className="hover:text-gray-400">
             Categories
           </Link>
-          <Link href="#OneTradeWorks" className="hover:text-gray-400">
+          <Link href="#BrunoGamesWorks" className="hover:text-gray-400">
             How it works
           </Link>
           <Link href="#QA" className="hover:text-gray-400">

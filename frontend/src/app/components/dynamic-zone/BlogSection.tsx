@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export const BlogSection = (props: any) => {
   return (
-    <div className="container mx-auto max-w-[1200px] px-2 py-16 text-white">
+    <div className="container mx-auto max-w-[1200px] px-2 py-16">
       <div className="mx-auto max-w-5xl">
-        <p className="font-sans text-light-gray mb-12 text-center text-2xl md:text-5xl">
-          Knowledge and Trends
+        <p className="font-sans text-light-black mb-12 text-center text-2xl md:text-5xl">
+          Events
         </p>
-        <div className="grid grid-cols-2 md:gap-8">
+        <div className="grid grid-cols-3 md:gap-6">
           {props.blogs.map((blog: any, index: number) => (
             <Link key={index} href={`/blogs/${blog.slug}`}>
-              <div className="!important transform rounded-lg border border-transparent p-2 shadow-md transition-transform hover:border-teal-500 hover:bg-neutral-900">
+              <div className="!important transform rounded-lg border border-transparent transition-transform">
                 {blog.banner && (
                   <div className="h-auto">
                     <Image
@@ -26,7 +26,7 @@ export const BlogSection = (props: any) => {
                     />
                   </div>
                 )}
-                <div className="md:p-6">
+                {/* <div className="md:p-6">
                   <div className="my-2 flex items-center justify-between text-xs text-gray-400">
                     {blog.minsToRead && (
                       <span>{blog.minsToRead} mins read</span>
@@ -39,7 +39,7 @@ export const BlogSection = (props: any) => {
                     {blog.title}
                   </h3>
                   <p className="text-muted text-xs">{blog.excerpt}</p>
-                </div>
+                </div> */}
               </div>
             </Link>
           ))}

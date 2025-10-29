@@ -1,7 +1,8 @@
 {
   "collectionName": "components_dynamic_zone_players_reviews",
   "info": {
-    "displayName": "PlayersReviews"
+    "displayName": "PlayersReviews",
+    "description": ""
   },
   "options": {},
   "attributes": {

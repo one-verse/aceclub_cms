@@ -93,6 +93,28 @@ export interface DynamicZoneFaqSection extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneFooterTopDemo extends Struct.ComponentSchema {
+  collectionName: "components_dynamic_zone_footer_top_demos";
+  info: {
+    description: "";
+    displayName: "footerTopDemo";
+  };
+  attributes: {
+    demoBtn: Schema.Attribute.Component<"shared.cta", false>;
+    footerTopDesc: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        "plugin::ckeditor5.CKEditor",
+        {
+          preset: "defaultHtml";
+        }
+      >;
+    footerTopImg: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios"
+    >;
+    mainTitle: Schema.Attribute.Text;
+  };
+}
+
 export interface DynamicZoneGamingZone extends Struct.ComponentSchema {
   collectionName: "components_dynamic_zone_gaming_zones";
   info: {
@@ -112,9 +134,6 @@ export interface DynamicZoneGamingZone extends Struct.ComponentSchema {
       false
     >;
     GamingZoneTitle: Schema.Attribute.Text;
-    GamingZoneTitleIcon: Schema.Attribute.Media<
-      "images" | "files" | "videos" | "audios"
-    >;
   };
 }
 
@@ -125,17 +144,6 @@ export interface DynamicZoneHomeBanner extends Struct.ComponentSchema {
     displayName: "HomeBanner";
   };
   attributes: {
-    bannerItemDetail: Schema.Attribute.Component<"shared.banner-detail", true>;
-    bannerSubTitle: Schema.Attribute.Text;
-    bannerTitle: Schema.Attribute.Text;
-    bannerTrust: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        "plugin::ckeditor5.CKEditor",
-        {
-          preset: "defaultHtml";
-        }
-      >;
-    downloadApp: Schema.Attribute.Component<"shared.cta", false>;
     homeSlider: Schema.Attribute.Component<"shared.home-slider-item", true>;
   };
 }
@@ -154,6 +162,7 @@ export interface DynamicZoneMegaSection extends Struct.ComponentSchema {
           preset: "defaultHtml";
         }
       >;
+    mainTitle: Schema.Attribute.Text;
     PlayButton: Schema.Attribute.Component<"shared.cta", false>;
     RHSImage: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     title: Schema.Attribute.Text;
@@ -185,6 +194,7 @@ export interface DynamicZoneOurPremier extends Struct.ComponentSchema {
 export interface DynamicZonePlayersReviews extends Struct.ComponentSchema {
   collectionName: "components_dynamic_zone_players_reviews";
   info: {
+    description: "";
     displayName: "PlayersReviews";
   };
   attributes: {
@@ -247,7 +257,6 @@ export interface DynamicZoneTraitsGrid extends Struct.ComponentSchema {
     icon: "crown";
   };
   attributes: {
-    afterBgImg: Schema.Attribute.Media<"images">;
     sectionDescription: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
@@ -395,14 +404,8 @@ export interface SharedFooter extends Struct.ComponentSchema {
           preset: "defaultHtml";
         }
       >;
-    bronzeVip: Schema.Attribute.Component<"shared.bronze-vip", false>;
-    footerPotImg: Schema.Attribute.Media<
-      "images" | "files" | "videos" | "audios"
-    >;
     footerSocial: Schema.Attribute.Component<"shared.socail-payment", false>;
-    Game: Schema.Attribute.Component<"shared.nav-items", false>;
     Info: Schema.Attribute.Component<"shared.nav-items", false>;
-    support: Schema.Attribute.Component<"shared.nav-items", false>;
   };
 }
 
@@ -416,6 +419,9 @@ export interface SharedHomeSliderItem extends Struct.ComponentSchema {
     bannerSliderImg: Schema.Attribute.Media<
       "images" | "files" | "videos" | "audios"
     >;
+    bannerSubTitle: Schema.Attribute.Text;
+    bannerTitle: Schema.Attribute.Text;
+    demoBtn: Schema.Attribute.Component<"shared.cta", true>;
   };
 }
 
@@ -436,6 +442,7 @@ export interface SharedNavItems extends Struct.ComponentSchema {
 export interface SharedPlayerRatingItem extends Struct.ComponentSchema {
   collectionName: "components_shared_player_rating_items";
   info: {
+    description: "";
     displayName: "PlayerRatingItem";
   };
   attributes: {
@@ -443,7 +450,6 @@ export interface SharedPlayerRatingItem extends Struct.ComponentSchema {
     PlayerImage: Schema.Attribute.Media<
       "images" | "files" | "videos" | "audios"
     >;
-    QuoteIcon: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     RatingDescription: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
@@ -526,7 +532,6 @@ export interface SharedSocailPayment extends Struct.ComponentSchema {
     displayName: "socailPayment";
   };
   attributes: {
-    certificate: Schema.Attribute.Component<"shared.nav-items", false>;
     copyRights: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
@@ -596,6 +601,7 @@ declare module "@strapi/strapi" {
       "dynamic-zone.categories-grid": DynamicZoneCategoriesGrid;
       "dynamic-zone.content-block": DynamicZoneContentBlock;
       "dynamic-zone.faq-section": DynamicZoneFaqSection;
+      "dynamic-zone.footer-top-demo": DynamicZoneFooterTopDemo;
       "dynamic-zone.gaming-zone": DynamicZoneGamingZone;
       "dynamic-zone.home-banner": DynamicZoneHomeBanner;
       "dynamic-zone.mega-section": DynamicZoneMegaSection;

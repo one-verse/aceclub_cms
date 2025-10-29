@@ -11,11 +11,6 @@
       "repeatable": false,
       "component": "shared.nav-items"
     },
-    "certificate": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.nav-items"
-    },
     "copyRights": {
       "type": "customField",
       "options": {

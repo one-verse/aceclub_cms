@@ -1,130 +1,128 @@
-/* @import url("https://fonts.googleapis.com/css2?family=roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .roboto-thin {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
 
 .roboto-extralight {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
 .roboto-light {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 .arial-regular {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .roboto-regular {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .roboto-medium {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 .roboto-semibold {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
 .roboto-bold {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .roboto-extrabold {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
 
 .roboto-black {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
 .roboto-thin-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
 .roboto-extralight-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
 
 .roboto-light-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
 .roboto-regular-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .roboto-medium-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .roboto-semibold-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
 
 .roboto-bold-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .roboto-extrabold-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   font-style: italic;
 }
 
 .roboto-black-italic {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
 .inter-normal {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
 .inter-bold {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
@@ -135,18 +133,18 @@
 @tailwind utilities;
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 
 html {
-  background-color: #222226;
+  background-color: #fff;
 }
 
 body {
-  background: #222226;
-  color: #fff;
-  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #000;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -203,11 +201,11 @@ ul li {
   margin-bottom: 0.625rem;
 }
 a {
-  color: #E2A275;
+  color: #EB445A;
 }
 .normalBtn {
   font-size: 1.125rem;
-  color: #E2A275;
+  color: #EB445A;
 }
 .text-muted ol,
 .text-muted ul {
@@ -222,7 +220,7 @@ a {
   margin: 0;
 }
 .bgHeader ul li a {
-  color: #96969E;
+  color: #fff;
 }
 
 .text-muted {
@@ -237,7 +235,7 @@ header {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   opacity: 1;
-  font-family: inherit;
+  font-family: "Roboto", sans-serif;
   color: var(--nav-item-color);
 }
 .nav-list ul {
@@ -259,22 +257,18 @@ header p {
 }
 
 .btn.primary-green {
-  border-radius: 6px;
-  border: 1px solid #222226;
-  background: linear-gradient(0deg, #000 0%, #000 57.17%, #000 100%);
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--color-red-59, #EB445A) 0%, var(--color-red-68, #F86F64) 100%);
   color: #FFF;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.125rem;
-  box-shadow: 0 0 10px rgba( 176, 112, 67 , 0.9);
+  text-transform: uppercase;
 }
 
 .btn.primary-green:hover {
-  border-radius: 4px;
-  border: 1px solid #E2A275;
-  /* background: linear-gradient(0deg, #E2A275 0%, #E2A275 57.17%, #E2A275 100%); */
-  box-shadow: 0 0 10px rgba( 122, 60, 15 , 0.9);
+  background: linear-gradient(90deg, var(--color-red-59, #F86F64) 0%, var(--color-red-68, #EB445A) 100%);
 }
 
 .tag-card {
@@ -377,7 +371,7 @@ span.swiper-pagination-bullet {
   color: transparent;
   margin: 0 0.2rem;
   position: relative;
-  background: #4C4C53;
+  background: #FFF;
   text-align: center;
   vertical-align: middle;
   height: 0.625rem;
@@ -385,14 +379,15 @@ span.swiper-pagination-bullet {
   opacity: 0.7;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #E2A275;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--color-red-59, #EB445A) 0%, var(--color-red-68, #F86F64) 100%);
+  width: 1.6rem;
   opacity: 1;
 }
 
 body {
-  color: #fff;
-  background: #0D0B17;
-  font-family: 'Times New Roman', Times, serif;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
 }
 
 @media all and (min-width: 768px) {
@@ -423,8 +418,7 @@ body {
 
 /* Calling station common css start */
 .bgHeader {
-  background: #222226;
-  border-bottom: 1px solid #4C4C53;
+  background: linear-gradient(0deg, var(--color-black-0, rgba(0, 0, 0, 0.00)) 0%, var(--color-black-solid, #000) 100%), var(--color-black-80, rgba(0, 0, 0, 0.80));
 }
 .text-theme {
   color: #CAC9CF;
@@ -453,20 +447,9 @@ section.variant-theme {
 
 
 .footerBg {
-  background:linear-gradient(180deg, #007C8F, #1D3066);
-  padding-bottom: 120px;
+  position: relative;
 }
-.themeGredient {
-  background: radial-gradient(71.41% 50% at 50% 50%, #131B22 0%, #101318 100%);
-}
-.footerBg h5 {
-  color: #E3E3E6;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.25rem;
-  margin-bottom: 1.25rem;
-  text-transform: uppercase;
-}
+
 .footerBg a {
   color: #CAC9CF;
   font-size: 1rem;
@@ -475,53 +458,54 @@ section.variant-theme {
   margin-bottom: 0.8rem;
 }
 .footerBg a:hover {
-  color: #E2A275;
+  color: #EB445A;
 }
 .footerBg a.activeBtn {
-  color: #E2A275;
+  color: #EB445A;
+}
+.foterSectionTop {
+  position: relative;
+  padding: 2rem 0.5rem;
+  background: #232630;
+}
+.fNavSection a {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.50);
+  margin-bottom: 0;
+}
+.foterSectionTopRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .copyRightTex {
-  text-align: left;
+  text-align: center;
+  padding:0.8rem 1rem;
+  background: #0C0D11;
 }
 .copyRightTex p {
   font-size: 1rem;
-  color: #CAC9CF;
+  color: #88919A;
   line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
 }
-.footerPotImg {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.footerPotImg img {
-  position: absolute;
-  top: -90px;
-  right: 0;
-  max-width: 300px;
-}
+
 .socialItemBox {
   position: relative;
 }
 .socialItemBox a {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 0;
 }
 .socialItemBox a img {
   max-width: 100%;
 }
-.certificateBox {
-  position: relative;
-}
-.paymentBox {
-  position: relative;
-}
-.paymentBox a {
-  display: inline-block;
-  margin-right: 10px;
-}
-.paymentBox a img {
-  max-width: 100%;
-}
+
 .promotionBox {
   border-radius: 1.25rem;
   border: 1px solid rgba(69, 27, 220, 0.70);
@@ -567,7 +551,7 @@ section.variant-theme {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.40), 0px 1px 0px 0px #513E66 inset;
 }
 section.variant-poineersTheme {
-  background: #182A48;
+  background: #fff;
   padding: 30px 20px;
 }
 .modelBg {
@@ -599,20 +583,23 @@ p {
 }
 
 .howToPLayLeft h5 {
-  color: #CAC9CF;
-  font-size: 2.25rem;
-  font-weight: 600;
-  line-height: 3.125rem;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
   margin-bottom: 30px;
 }
 .howToPLayLeft h5:hover {
-  color: #CAC9CF;
+  color: #000;
 }
 .howToPLayLeft p {
-  margin-bottom: 6px;
-  font-size: 1.125rem;
-  color: #CAC9CF;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #797979;
   line-height: 1.8rem;
+}
+.howToPLayLeft p strong {
+  color: #000;
 }
 .howToPLayLeft  .normalBtn {
   margin-top: 50px;
@@ -636,19 +623,58 @@ p {
 .primier-desc p {
   margin: 0;
 }
+
+.featureBg {
+  background: #F8F8F8;
+  position: relative;
+  padding-bottom: 70px;
+}
+.featureBg h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #404040;
+  font-weight: 500;
+  margin-bottom: 4.5rem;
+  text-align: center;
+
+}
+.FeatureItem {
+  gap:3%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 .featureBox {
-  border-radius: 4px;
-  border: 1px solid #1B1725;
-  background: #221E2F;
+  border-radius: 30px;
+  background: var(--color-grey-92, #EBEBEB);
   padding: 15px 20px;
   justify-content: center;
+  width: 31%;
+  position: relative;
+  text-align: center;
 }
-.featureBox h5 {
-  color: #FFF;
+.featureBox h3 {
+  color: #404040;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   margin-bottom:1.25rem;
+  margin-top: 10px;
+}
+.featureBox p {
+  color: #404040;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom:1rem;
+}
+.featureBox .featureIcon {
+  margin: 0 auto;
+  margin-top: -40px;
+  position: relative;
+  top: -10px;
 }
 .featureSmall p {
   color: #B52525;
@@ -702,17 +728,17 @@ p {
   line-height: 1.5rem; /* 120% */
 }
 .navLink a:hover {
-  color:#E2A275;
+  color:#EB445A;
 }
 a.active-link {
-  color:#E2A275 !important;
+  color:#EB445A !important;
   position: relative;
 }
 a.active-link::after {
   position: absolute;
   width: 100%;
   height: 1px;
-  background:#E2A275;
+  background:#EB445A;
   content: '';
   bottom: -4px;
   left: 0;
@@ -790,53 +816,11 @@ a.active-link::after {
   margin-left: 0.25rem;
   display: inline-block;
 } 
-.featureBg {
-  background:linear-gradient(180deg, #007C8F, #1D3066);
-  position: relative;
-  /* padding:30px auto; */
-}
-.featureBg h2 {
-  font-size: 2rem;
-  line-height: 2rem;
-  color: #CAC9CF;
-  font-weight: 600;
-
-}
-.featureText p {
-  color: #CAC9CF;
-  font-size: 1.25rem;
-  line-height: 1.6rem;
-  margin: 0;
-}
-.featureIcon {
-  position: relative;
-  margin-bottom: 20px;
-}
-.featureIcon img {
-  max-width: 100%;
-  height: auto;
-  position: relative;
-}
-.featureText p {
-  font-size: 1.25rem;
-  line-height: 1.8rem;
-  color: #CAC9CF;
-  margin: 0;
-}
-.afterFeatureImg {
-  position:absolute;
-  right:0;
-  bottom:0;
-  max-width:430px;
-}
-.FeatureItem {
-  gap:6%;
-}
 
 /* Gamingzone css start */
 .gamingZoneRow {
   padding: 30px 20px;
-  background: #222226;
+  background: #21252C;
 }
 .gamingZoneRow p {
   color: #CAC9CF;
@@ -852,24 +836,21 @@ a.active-link::after {
   line-height: 2.5rem;
   font-weight: 600;
 }
-.gamingZoneTitle h2 img {
-  max-height: 65px;
-  display: inline-block;
-  margin-right: 10px;
-}
 .gamingZoneCnt {
   position: relative;
+  text-align: center;
 } 
-.gamingZoneCnt h6 {
-  margin-bottom: 6px;
-  color: #E2A275;
+.gamingZoneCnt h3 {
+  margin-bottom: 1.6rem;
+  color: #fff;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 .gamingZoneCnt p {
+  color: #707C8F;
   margin-bottom: 1.8rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 /* Gamingzone css end */
@@ -972,7 +953,7 @@ a.active-link::after {
   font-size: 1.5rem;
   line-height: 2rem;
   color: #CAC9CF;
-  border: 1px solid #E2A275;
+  border: 1px solid #EB445A;
   border-radius: 50px;
   min-height:45px;
   padding:0.5rem 1.688rem;
@@ -981,7 +962,7 @@ a.active-link::after {
 }
 .tabItemBtn button.activeBtn,
 .tabItemBtn button:hover {
-  background: #E2A275;
+  background: #EB445A;
   color: #000;
 }
 .tagItem {
@@ -1071,7 +1052,7 @@ a.active-link::after {
   position: relative;
 }
 .slideDesc h3 {
-  color: #E2A275;
+  color: #EB445A;
   margin-bottom: 1rem;
   font-size: 1.625rem;
   line-height: 2rem;
@@ -1102,8 +1083,8 @@ a.active-link::after {
 /* Player slider css start */
 .playersSliderRow {
   position:relative;
-  padding:2.7rem 1rem;
-  background:linear-gradient(180deg, #494b51, #222226)
+  padding:3.5rem 1rem;
+  background:#1C2025;
 }
 
 .playersSliderRow .swiper-wrapper {
@@ -1123,140 +1104,143 @@ a.active-link::after {
   margin-bottom: 3rem;
 }
 .playerSliderTitle h2 {
-  font-size: 2.25rem;
-  line-height: 2rem;
-  margin: 0;
+  font-size: 2rem;
+  line-height: 2.5rem;
   color: #fff;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .reviewSlideItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.playerRateCnt {
   position: relative;
   padding: 25px;
-  border-radius: 16px;
-  border:1px solid #343339;
-  background: #111113;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 25px;
+  background: #20242A;
+  padding-right: 80px;
 }
 
-.reviewSlideItem .quoteIcon{
-  position: relative;
-  margin-bottom: 20px;
-}
 .playerDesc {
   position: relative;
 }
 .playerDesc p {
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #CAC9CF;
+  color: #707C8F;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 .playerDetail {
   position: relative;
-  margin-top: 10px;
+  width: 40%;
+  left: -70px;
+
+
 }
 .playerDetail img {
-  width: 48px;
-  height: 48px;
+  width: 100%;
   border-radius: 100px;
-  margin-bottom:12px;
 }
-.playerDetail p {
-  font-weight: 500;
-  color: #fff;
-  font-size: 1.125rem;
+.payerName {
+  text-align: right;
+  font-size: 1rem;
   line-height: 1.5rem;
-  margin: 0;
+  color: #707C8F;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.allPlayerSider {
+  max-width: 800px;
+  margin: 0 auto;
 }
 /* Player slider css end */
 /* Banner section css start */
 .homeBanner {
   position: relative;
-  background:linear-gradient(180deg, #222226, #222226);
-  padding:2.7rem 1rem;
+  margin-top: -72px;
 }
-.homeBannerCnt {
-  position: relative;
+.bannerCaption {
+  position: absolute;
+  left: 50px;
+  top: calc(50% - 150px);
+  width: 450px;
 }
-.homeBannerCnt h1 {
-  font-weight: 500;
-  margin: 0;
-  font-size: 2.5rem;
+.bannerCaption h1 {
+  font-size:2rem;
+  line-height: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
 }
-.homeBannerCnt h3 {
-  color: #E2A275;
-  font-size: 1.75rem;
+.bannerCaption p {
+  font-size:0.875rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
   font-weight: 400;
-}
-.bannerTitle {
-  position: relative;
-  margin-bottom: 1.25rem;
-}
-.bannerForm {
-  position: relative;
-  margin-bottom: 1.25rem;
-}
-.bannerForm input {
-  min-width: 250px;
-  border-radius: 8px;
-  color: #222226;
-  min-height: 40px;
-  background: #ffff;
-  padding: 6px;
-  font-size: 1rem;
+  color: #fff;
 }
 .bannerForm button {
   position: relative;
   padding: 8px 15px;
   color: #222226;
-  background: #E2A275;
+  background: #EB445A;
   border-radius: 8px;
   font-weight: 500;
   font-size: 1rem;
 }
-.trustSection {
+/* Banner section css end */
+.mainTitle {
   position: relative;
-  margin-bottom: 1.8rem;
-  margin-top: 1.8rem;
+  margin:1rem 0 2rem;
+  font-size:2rem;
+  line-height: 2.5rem;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
 }
-.trustSection p {
-  color: #96969E;
-  font-size: 0.875rem;
+
+/* Footer top section start */
+.footerTopMain {
+  position: relative;
+  padding:0 1rem;
+  background: linear-gradient(90deg, #C7C571 10%, #C7C571 50%, #6FB32B 80%, #78AF2C 100%);
+  margin-bottom:3rem;
+  min-height: 280px;
+}
+.footerTopRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footerTopLeft {
+  position: relative;
+  width: 60%;
+}
+.footerTopLeft h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  color: #000;
 }
-.bannerItemDetail {
-  position: relative;
-  gap: 2%;
-}
-.bannerItem {
-  min-width: 150px;
-}
-.bannerItemDetail h4 {
-  color: #E2A275;
-  margin: 0;
-  font-size:1.875rem;
-  font-weight: 600;
-}
-.bannerItemDetail p {
-  color: #96969E;
-  margin: 0;
-  font-size: 1.25rem;
+.footerTopLeft p {
+  font-size:1rem;
+  line-height: 1.2rem;
   font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #000;
+
 }
-.errorMsg,
-.successMsg {
-  position: absolute;
-  top:42px;
-  left: 0;
-  margin: 0;
+.footerTopRight {
+  position: relative;
+  top: -20px;
 }
-.bannerForm button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-/* Banner section css end */
+/* Footer top section end */
 @media(max-width:991px) {
   .themeGredient {
     padding-top: 26px;
@@ -1282,7 +1266,7 @@ a.active-link::after {
   
 }
 .getSms .btn.primary-green {
-  background: #E2A275;
+  background: #EB445A;
   color: #222226;
 }
 
@@ -1302,7 +1286,7 @@ a.active-link::after {
   background: linear-gradient(35deg, #007C8F ,#1D3066);
 }
 .footerDownload .btn.primary-green {
-  background: #E2A275;
+  background: #EB445A;
   color: #222226;
   min-height: 40px;
   box-shadow: none;

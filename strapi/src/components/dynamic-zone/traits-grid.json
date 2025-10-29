@@ -21,13 +21,6 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.trait"
-    },
-    "afterBgImg": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }

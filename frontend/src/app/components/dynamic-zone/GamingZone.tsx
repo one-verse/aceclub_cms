@@ -31,10 +31,6 @@ export const GamingZone = (props: GamingZoneType) => {
       {/* Title */}
       <div className="gamingZoneTitle max-w-6xl mx-auto">
         <h2>
-          <img
-            src={strapiImage(props.GamingZoneTitleIcon?.url) || "/placeholder.png"}
-            alt="Gaming Zone"
-          />
           {props.GamingZoneTitle}
         </h2>
       </div>

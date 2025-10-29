@@ -20,16 +20,6 @@
       "type": "component",
       "repeatable": false,
       "component": "dynamic-zone.carousel"
-    },
-    "GamingZoneTitleIcon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }

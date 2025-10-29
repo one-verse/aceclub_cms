@@ -38,10 +38,10 @@ const Navbar = ({
           <div className="navbar-brand">
             <Link href="/">
               <Image
-                width={168}
-                height={32}
+                width={144}
+                height={48}
                 src={strapiImage(logo.url)}
-                alt="Rummy777"
+                alt="BRUNO GAMING"
                 className="max-w-48 md:max-w-64 h-auto"
               />
             </Link>

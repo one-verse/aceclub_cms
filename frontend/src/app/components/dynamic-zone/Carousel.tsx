@@ -29,7 +29,7 @@ export const Carousel = (props: any) => {
             autoplay={{ delay: 8000, disableOnInteraction: false }}
           >
             {props.slides.map((slide: any, slideIndex: number) => {
-              const link = slide.link || "https://exchange.onetrade.live/category/all";
+              const link = slide.link || "https://exchange.BrunoGames.live/category/all";
               const target = slide.target === "blank" ? "_blank" : "_self";
 
               return (
@@ -52,7 +52,7 @@ export const Carousel = (props: any) => {
 
     <GreenBtn
       title="Signup & Trade Live!"
-      url="https://exchange.onetrade.live"
+      url="https://exchange.BrunoGames.live"
       target="_blank"
       rel="noopener noreferrer"
     />

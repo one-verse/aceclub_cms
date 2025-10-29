@@ -61,6 +61,9 @@ const componentMapping: { [key: string]: any } = {
   "dynamic-zone.home-banner": dynamic(() =>
     import("./HomeBanner").then((mod) => mod.HomeBanner)
   ),
+  "dynamic-zone.footer-top-demo": dynamic(() =>
+    import("./FooterTopSection").then((mod) => mod.FooterTopSection)
+  ),
 };
 
 const DynamicZoneManager: React.FC<Props> = ({ dynamicZone }) => {

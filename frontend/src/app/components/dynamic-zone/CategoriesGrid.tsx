@@ -29,7 +29,7 @@ export const CategoriesGrid = (props: any) => {
   {props.categories.map((category: any, index: number) => (
     <a
       key={index}
-      href={category.link || "https://exchange.onetrade.live/category/all"}
+      href={category.link || "https://exchange.BrunoGames.live/category/all"}
       target="_blank"
       rel="noopener noreferrer"
       className="tag-card-wrapper p-1 md:basis-1/4 block"
@@ -58,7 +58,7 @@ export const CategoriesGrid = (props: any) => {
   {props.tags.map((filter: any, index: number) => (
     <a
       key={index}
-      href={filter.link || "https://exchange.onetrade.live/category/all"} 
+      href={filter.link || "https://exchange.BrunoGames.live/category/all"} 
       target="_blank" 
       rel="noopener noreferrer" 
       className="text-muted p-2 pl-12 text-base filter md:py-5 md:text-xl"

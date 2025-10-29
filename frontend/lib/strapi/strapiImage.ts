@@ -5,7 +5,7 @@ export function strapiImage(url: string): string {
   if (url.startsWith("/")) {
     if (
       !process.env.NEXT_PUBLIC_STRAPI_IMAGE_API_URL 
-      && document?.location.host.endsWith(".onetrade.live")
+      && document?.location.host.endsWith(".BrunoGames.live")
     ) {
       return `https://${document.location.host.replace(
         "client-",

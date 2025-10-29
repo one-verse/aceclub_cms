@@ -10,53 +10,29 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": false
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "seo": {
       "type": "component",
       "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "component": "seo.seo"
     },
     "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "string",
       "unique": true
     },
     "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "text"
     },
     "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "text"
     },
     "DynamicZone": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "dynamiczone",
       "components": [
         "dynamic-zone.carousel",
@@ -88,7 +64,8 @@
         "dynamic-zone.players-reviews",
         "shared.home-slider-item",
         "shared.banner-detail",
-        "dynamic-zone.home-banner"
+        "dynamic-zone.home-banner",
+        "dynamic-zone.footer-top-demo"
       ]
     }
   }

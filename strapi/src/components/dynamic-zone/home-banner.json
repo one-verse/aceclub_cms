@@ -6,35 +6,11 @@
   },
   "options": {},
   "attributes": {
-    "bannerTitle": {
-      "type": "text"
-    },
-    "bannerSubTitle": {
-      "type": "text"
-    },
-    "bannerTrust": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
-    },
-    "bannerItemDetail": {
-      "displayName": "bannerDetail",
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.banner-detail"
-    },
     "homeSlider": {
       "displayName": "homeSliderItem",
       "type": "component",
       "repeatable": true,
       "component": "shared.home-slider-item"
-    },
-    "downloadApp": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.cta"
     }
   }
 }

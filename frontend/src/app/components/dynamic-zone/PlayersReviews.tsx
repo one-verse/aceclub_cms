@@ -41,7 +41,7 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
     <section className="playersSliderRow py-10">
       {/* Title */}
       <div className="playerSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
-        <h2 className="text-2xl font-bold">{props.mainTitle}</h2>
+        <h2 className="text-2xl">{props.mainTitle}</h2>
       </div>
 
       {/* Slider */}
@@ -49,11 +49,12 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
           {props.ReviewItem?.length > 0 && (
             <Swiper
               modules={[Pagination, Autoplay]}
-              spaceBetween={30}
-              slidesPerView={1.2}
+              spaceBetween={1}
+              slidesPerView={1}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               breakpoints={{
-                640: { slidesPerView: 2.2 },
-                1024: { slidesPerView: 3.2 },
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 1 },
               }}
               loop={true}
               // autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -62,7 +63,7 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
               {props.ReviewItem.map((review) => (
                 <SwiperSlide key={review.id}>
                   <div className="reviewSlideItem">
-                    <div>
+                    <div className="playerRateCnt">
                       {review.QuoteIcon?.url && (
                         <Image
                           src={strapiImage(review.QuoteIcon.url)}
@@ -73,6 +74,7 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
                         />
                       )}
                       <div className="text-theme playerDesc" dangerouslySetInnerHTML={{ __html: review.RatingDescription }}></div>
+                      <p className="payerName">{review.PlayerDetails}</p>
                     </div>
                     <div className="playerDetail">
                       {review.PlayerImage?.url && (
@@ -84,7 +86,7 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
                         height={48}
                         />
                       )}
-                      <p>{review.PlayerDetails}</p>
+                      
                     </div>
                   </div>
                 </SwiperSlide>
