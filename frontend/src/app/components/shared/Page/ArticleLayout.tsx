@@ -18,14 +18,14 @@ export async function ArticleLayout({ data }: { data: any }) {
           />
         )}
 
-        <p className="h6 montserrat text-center text-white">
+        <p className="h6 montserrat text-center">
           {data.articleDescription}
         </p>
-        <p className="montserrat mt-4 text-center text-base text-white">
+        <p className="montserrat mt-4 text-center text-base">
           {format(new Date(data.publishedAt), "MMMM dd, yyyy")}
         </p>
       </div>
-      <div className="page-body text-white my-6">
+      <div className="page-body my-6">
         {data?.DynamicZone && (
           <DynamicZoneManager dynamicZone={data?.DynamicZone} />
         )}

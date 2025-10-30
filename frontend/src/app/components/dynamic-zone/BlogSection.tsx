@@ -21,8 +21,8 @@ export const BlogSection = (props: any) => {
                       className="h-auto max-w-full rounded-lg"
                       width={1000}
                       height={100}
-                      src={strapiImage(blog.banner.url)}
-                      alt={blog.banner.alternativeText || ""}
+                      src={strapiImage(blog.thumbnail.url)}
+                      alt={blog.thumbnail.alternativeText || ""}
                     />
                   </div>
                 )}
