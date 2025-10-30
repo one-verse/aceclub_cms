@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
  
 const FILE_URL =
   "https://cdn.callingstation.co.in/releases/desktop/CallingStation.exe?affiliateCode=GPS";
-const API_BASE_URL = "https://gameapi.thespartanpoker.in/pokerapi/v1/website";
+const API_BASE_URL = "https://gameapi.1poker.live/pokerapi/v1/website";
  
 export async function GET(request: Request) {
   try {
