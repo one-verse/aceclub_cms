@@ -51,7 +51,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
                 ))}
               </div>
               <div className="socialItemBox flex gap-3">
-                {footerSocial.SocialItem?.items?.map((item: any) => (
+                {footerSocial?.SocialItem?.items?.map((item: any) => (
                   <Link
                     key={item.id}
                     href={item.link}
@@ -66,7 +66,7 @@ export default function Footer({ FooterData }: { FooterData: any }) {
           </div>
         </div>
         <div className="copyRightTex">
-          <div dangerouslySetInnerHTML={{ __html: footerSocial.copyRights }}></div>
+          <div dangerouslySetInnerHTML={{ __html: footerSocial?.copyRights }}></div>
         </div>
       </div>
     </footer>
