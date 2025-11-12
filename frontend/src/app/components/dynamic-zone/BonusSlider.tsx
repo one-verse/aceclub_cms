@@ -65,21 +65,21 @@ export const BonusSlider = (props: BonusSliderProps) => {
               {props.allBonus.map((bonus) => (
                 <SwiperSlide key={bonus.id}>
                   <div className={clsx("slideItemBox", bonus.bonusTag)} 
-                  style={{
-                    backgroundImage: bonus.bonusBgImg?.url
-                      ? `url(${strapiImage(bonus.bonusBgImg.url)})`
-                      : "none",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                  }}
+                  // style={{
+                  //   backgroundImage: bonus.bonusBgImg?.url
+                  //     ? `url(${strapiImage(bonus.bonusBgImg.url)})`
+                  //     : "none",
+                  //   backgroundSize: "cover",
+                  //   backgroundRepeat: "no-repeat",
+                  //   backgroundPosition: "center",
+                  // }}
                   >
                     {/* Content */}
                     <div className="text-sm bonusPackage">
-                      <span>{bonus.bonusPackage}</span>
+                      {/* <span>{bonus.bonusPackage}</span> */}
                     </div>
                     <div className="slideDesc">
-                      <h3>{bonus.bonusTitle}</h3>
+                      {/* <h3>{bonus.bonusTitle}</h3> */}
                       <div className="text-theme" dangerouslySetInnerHTML={{ __html: bonus.bonusDesc }}>
                       </div>
                     </div>
@@ -89,8 +89,10 @@ export const BonusSlider = (props: BonusSliderProps) => {
                         src={strapiImage(bonus.bonusIcon.url)}
                         alt={bonus.bonusTitle}
                         className="bonusIcon"
-                        width={60}
-                        height={60}
+                        fill
+            style={{ objectFit: "contain" }}
+                        // width={60}
+                        // height={60}
                       />
                     )}
                   </div>

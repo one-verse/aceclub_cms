@@ -16,7 +16,8 @@ interface MegaSectionType {
 export const MegaSection = (props: MegaSectionType) => {
   return (
     <section className={clsx(`variant-${props.variant}`)}>
-      <h2 className="mainTitle">{props.mainTitle}</h2>
+      {/* <h2 className="mainTitle">{props.mainTitle}</h2> */}
+      {<h2 className="mainTitle">Product Overview</h2>}
       <div className={clsx("container max-w-6xl mx-auto", props.RHSImage ? "flex flex-col md:flex-row items-center md:items-center space-y-10 md:space-y-0 md:space-x-12" : "p-4 md:p-20")}>
         {/* Image Box */}
         {props.RHSImage && (

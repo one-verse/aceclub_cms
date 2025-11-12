@@ -835,6 +835,7 @@ a.active-link::after {
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 600;
+  color: white;
 }
 .gamingZoneCnt {
   position: relative;
@@ -1023,8 +1024,8 @@ a.active-link::after {
   position: relative;
   padding: 20px 40px 55px 30px;
   border-radius: 10px;
-  background:#343339;
-  min-height: 21rem;
+  /* background:#343339; */
+  min-height: 51rem;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -1084,7 +1085,8 @@ a.active-link::after {
 .playersSliderRow {
   position:relative;
   padding:3.5rem 1rem;
-  background:#1C2025;
+  /* background:#1C2025; */
+  background: linear-gradient(90deg, #C7C571 10%, #C7C571 50%, #6FB32B 80%, #78AF2C 100%);
 }
 
 .playersSliderRow .swiper-wrapper {
@@ -1119,9 +1121,9 @@ a.active-link::after {
 }
 .playerRateCnt {
   position: relative;
-  padding: 25px;
-  border-radius: 25px;
-  background: #20242A;
+  /* padding: 25px; */
+  /* border-radius: 25px; */
+  /* background: #20242A; */
   padding-right: 80px;
 }
 
@@ -1129,10 +1131,10 @@ a.active-link::after {
   position: relative;
 }
 .playerDesc p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
-  color: #707C8F;
-  font-weight: 400;
+  color: #000;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 .playerDetail {
@@ -1147,10 +1149,10 @@ a.active-link::after {
   border-radius: 100px;
 }
 .payerName {
-  text-align: right;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #707C8F;
+  /* text-align: right; */
+  font-size: .7rem;
+  /* line-height: 1.5rem; */
+  color: #000;
   font-weight: 400;
   margin-bottom: 0;
 }

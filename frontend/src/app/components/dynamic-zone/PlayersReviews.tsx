@@ -40,9 +40,9 @@ export const PlayersReviews = (props: PlayersReviewsProps) => {
   return (
     <section className="playersSliderRow py-10">
       {/* Title */}
-      <div className="playerSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
+      {/* <div className="playerSliderTitle max-w-6xl mx-auto mb-6 flex items-center justify-center gap-3">
         <h2 className="text-2xl">{props.mainTitle}</h2>
-      </div>
+      </div> */}
 
       {/* Slider */}
       <div className="allPlayerSider max-w-6xl mx-auto">
