@@ -3,23 +3,19 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
-    const forStrapi = await request.json(); // { name, email, message }
-    
-    // Strapi v5 expects payload wrapped in "data"
-    const response = await strapiCall.post("/api/enquiries", {
-      data: forStrapi, // payload
-    }, {
-      headers: { "Content-Type": "application/json" }, // config
-    });
+    const formData = await request.json();
+    console.log("Form data received at Next.js API:", formData);
+
+    // Forward to Strapi (wrap under "data")
+    const response = await strapiCall.post("/enquiries", { data: formData });
 
     return NextResponse.json(response.data);
   } catch (error: any) {
-    return new NextResponse(
-      JSON.stringify({
-        errorMessage: error.message,
-        error: "Something went wrong, please try again later",
-      }),
+    console.error("Error in Next.js /api/enquiry:", error.message);
+    return NextResponse.json(
+      { error: "Something went wrong", details: error.message },
       { status: 500 }
     );
   }
 }
+

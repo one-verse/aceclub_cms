@@ -118,7 +118,8 @@ export default function ContactForm() {
 
   const processForm = async (data: any) => {
     console.log("Form Submitted: ", data);
-    const formResponse = await internalCall.post("/enquiry", data);
+    const payload =  data ;
+    const formResponse = await internalCall.post("/api/enquiry", payload); //{ data: payload }
     console.group("\n === RESPNOSE FROM strapi  ===");
     console.log(formResponse.data);
     console.groupEnd();
