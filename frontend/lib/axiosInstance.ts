@@ -36,10 +36,24 @@ const createAxiosInstance = (baseURL: string, token: string = "") => {
     },
     (error) => {
       // Server responded with a status other than 2xx
-      console.error("Response Error:");
-      console.error("Status:", error.response.status);
-      console.error("Headers:", error.response.headers);
-      console.error("Data:", error.response.data);
+      console.group("=== AXIOS RESPONSE ERROR ===");
+
+if (error.response) {
+  // The request was made and the server responded with a status code outside 2xx
+  console.error("Status:", error.response.status);
+  console.error("URL:", error.config?.url);
+  console.error("Headers:", error.response.headers);
+  console.error("Data:", error.response.data);
+} else if (error.request) {
+  // The request was made but no response was received
+  console.error("No response received");
+  console.error("Request:", error.request);
+} else {
+  // Something happened in setting up the request
+  console.error("Error", error.message);
+}
+
+console.groupEnd();
       return Promise.reject(error);
     }
   );

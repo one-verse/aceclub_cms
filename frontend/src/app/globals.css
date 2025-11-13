@@ -332,7 +332,7 @@ section.variant-pink {
 }
 
 .form-submit {
-  background-color: rgb(65, 177, 160);
+  background: linear-gradient(90deg, var(--color-red-59, #EB445A) 0%, var(--color-red-68, #F86F64) 100%);
 }
 
 .trigger-button {

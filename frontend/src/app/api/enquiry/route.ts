@@ -3,11 +3,15 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
-    const forStrapi = await request.json();
+    const forStrapi = await request.json(); // { name, email, message }
+    
+    // Strapi v5 expects payload wrapped in "data"
     const response = await strapiCall.post("/api/enquiries", {
-      headers: { "Content-Type": "application/json" },
-      data: forStrapi,
+      data: forStrapi, // payload
+    }, {
+      headers: { "Content-Type": "application/json" }, // config
     });
+
     return NextResponse.json(response.data);
   } catch (error: any) {
     return new NextResponse(
@@ -15,9 +19,7 @@ export async function POST(request: NextRequest) {
         errorMessage: error.message,
         error: "Something went wrong, please try again later",
       }),
-      {
-        status: 500,
-      }
+      { status: 500 }
     );
   }
 }

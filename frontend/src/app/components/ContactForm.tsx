@@ -118,7 +118,7 @@ export default function ContactForm() {
 
   const processForm = async (data: any) => {
     console.log("Form Submitted: ", data);
-    const formResponse = await internalCall.post("/api/enquiry", data);
+    const formResponse = await internalCall.post("/enquiry", data);
     console.group("\n === RESPNOSE FROM strapi  ===");
     console.log(formResponse.data);
     console.groupEnd();
@@ -136,7 +136,7 @@ export default function ContactForm() {
     <div className="bg-black bg-neutral-900 px-4 py-16 text-white">
       <div className="contact-form-inner-wrapper border-radius-primary mx-auto bg-black p-2 md:max-w-4xl md:p-6">
         <h2 className="font-sans text-light-gray mb-4 text-center text-2xl md:text-5xl">
-          Got questions?
+          Schedule a Demo
         </h2>
         <p className="text-muted mb-6 text-center text-base md:text-2xl">
         We’re right here for you. Reach out and our support team will help you promptly! 
@@ -235,7 +235,7 @@ export default function ContactForm() {
                       id="name"
                       {...register("name")}
                       className="form-control w-full rounded-xl p-2 text-white outline-none focus:ring-2 focus:ring-teal-500"
-                      placeholder="Name/ User ID *"
+                      placeholder="Name *"
                     />
                     {errors.name?.message && (
                       <p className="text-red-400">{errors.name.message}</p>
