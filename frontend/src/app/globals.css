@@ -1254,6 +1254,14 @@ a.active-link::after {
   .socialFooter h5 {
     text-align: center;
   }
+  .featureBox {
+    width: 100%;
+  }
+  .footerTopLeft h3{
+    font-size: .6rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+  }
 }
 @media(max-width:767px) {
   
@@ -1264,6 +1272,17 @@ a.active-link::after {
   .destinationBg h5 {
     margin-bottom: 20px;
     font-size: 1rem;
+  }
+  .featureBox {
+    width: 100%;
+  }
+  .footerTopLeft h3{
+    font-size: .6rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+  }
+  .bannerCaption{
+    display: none;
   }
   
 }
@@ -1295,6 +1314,9 @@ a.active-link::after {
   border: none;
   font-weight: 700;
 }
+.bannerCaption{
+  display: none;
+}
 }
 @media(max-width:560px) {
   .bannerItemDetail {
@@ -1307,6 +1329,17 @@ a.active-link::after {
   .FeatureItem {
     flex-direction: column;
     gap: 30px;
+  }
+  .featureBox {
+    width: 100%;
+  }
+  .footerTopLeft h3{
+    font-size: .6rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+  }
+  .bannerCaption{
+    display: none;
   }
 }
 
