@@ -134,7 +134,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-black bg-neutral-900 px-4 py-16 text-white">
+    <div className="bg-black bg-neutral-900 px-4 py-16 text-white" id="enquiry-form">
       <div className="contact-form-inner-wrapper border-radius-primary mx-auto bg-black p-2 md:max-w-4xl md:p-6">
         <h2 className="font-sans text-light-gray mb-4 text-center text-2xl md:text-5xl">
           Schedule a Demo
