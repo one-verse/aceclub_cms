@@ -1169,7 +1169,8 @@ a.active-link::after {
 .bannerCaption {
   position: absolute;
   left: 50px;
-  top: calc(50% - 150px);
+  /* top: calc(50% - 150px); */
+  top:65%;
   width: 450px;
 }
 .bannerCaption h1 {

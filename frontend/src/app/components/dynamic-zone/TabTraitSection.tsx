@@ -76,6 +76,7 @@ export const TabTraitSection = ({ TabTraitTitle, tabDetails }: TabTraitSectionTy
                     __html: tabDetails[activeIndex].tabDescContent,
                   }}
                 />
+                <div>gopal{tabDetails[activeIndex].tabDescContent}</div>
               </div>
             </div>
           </div>

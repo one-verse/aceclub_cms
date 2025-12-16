@@ -280,7 +280,7 @@ export default function ContactForm() {
             Submit
           </button>
         </form>
-        <div className="my-6 text-center">
+        {/* <div className="my-6 text-center">
           <a
             href="/affiliates"
             className="text-muted trigger-button p-4 text-2xl"
@@ -296,7 +296,7 @@ export default function ContactForm() {
               src="img/misc/arrow.svg"
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

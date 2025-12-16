@@ -1,6 +1,7 @@
 import ContactForm from "../app/components/ContactForm";
 import PageContent from "../../lib/shared/PageContent";
 import fetchContentType from "../../lib/strapi/fetchContentType";
+import ContactPageClient from "./ContactPageClient";
 
 export default async function Page() {
   const pageData = await fetchContentType(
@@ -12,7 +13,8 @@ export default async function Page() {
   return (
     <div>
       <PageContent pageData={pageData} />
-      <ContactForm />
+      {/* <ContactForm /> */}
+      {/* <ContactPageClient isModelShow={false} /> */}
     </div>
   );
 }

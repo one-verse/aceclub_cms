@@ -11,6 +11,7 @@ import "swiper/css/autoplay";
 import { strapiImage } from "../../../../lib/strapi/strapiImage";
 import Link from "next/link";
 import GreenBtn from "../shared/GreenBtn";
+import ContactPageClient from "@/app/ContactPageClient";
 
 interface DemoButton {
   id: number;
@@ -44,7 +45,18 @@ interface HomeBannerType {
 }
 
 export const HomeBanner = (props: HomeBannerType) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const handleNavClick = () => {
+    console.log("handleNavClick");
+      setIsModalVisible(true);
+    
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
   return (
+    <>
     <section className="homeBanner">
           {props.homeSlider && props.homeSlider.length > 0 && (
           <div className="homeBannerSlider">
@@ -70,13 +82,14 @@ export const HomeBanner = (props: HomeBannerType) => {
                   )}
                   <div className="bannerCaption">
                     <h1>{slide.bannerTitle}</h1>
-                    <p>{slide.bannerSubTitle}</p>
+                    {/* <p>{slide.bannerSubTitle}</p> */}
                     {slide.demoBtn && slide.demoBtn.length > 0 && (
-                      <GreenBtn
-                        title={slide.demoBtn[0].title}
-                        url={slide.demoBtn[0].link}
-                        target={slide.demoBtn[0].target || "_self"}
-                      />
+                      // <GreenBtn
+                      //   title={slide.demoBtn[0].title}
+                      //   url={slide.demoBtn[0].link}
+                      //   target={slide.demoBtn[0].target || "_self"}
+                      // />
+                      <button className="block md:inline-block btn primary-green text-black font-medium text-sm px-5 py-2.5  text-center" onClick={handleNavClick}>SCHEDULE DEMO</button>
                     )}
                   </div>
                 </SwiperSlide>
@@ -88,6 +101,13 @@ export const HomeBanner = (props: HomeBannerType) => {
           </div>
           )}
     </section>
+    {isModalVisible && (
+      <ContactPageClient
+        isModelShow={isModalVisible}
+        onClose={closeModal}
+      />
+    )}
+    </>
   );
 };
 

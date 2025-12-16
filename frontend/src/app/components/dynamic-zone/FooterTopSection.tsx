@@ -2,9 +2,10 @@
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { strapiImage } from "../../../../lib/strapi/strapiImage";
 import GreenBtn from "../shared/GreenBtn";
+import ContactPageClient from "@/app/ContactPageClient";
 interface footerTopData {
   mainTitle:string
   footerTopDesc: string;
@@ -14,7 +15,18 @@ interface footerTopData {
 }
 
 export const FooterTopSection = (props: footerTopData) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const handleNavClick = () => {
+    console.log("handleNavClick");
+      setIsModalVisible(true);
+    
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
   return (
+    <>
     <section className="footerTopMain">
       <div className="container mx-auto max-w-[1200px] px-4">
         <div className="footerTopRow">
@@ -34,11 +46,12 @@ export const FooterTopSection = (props: footerTopData) => {
               //   {props.demoBtn.title}
               // </Link>
 
-              <GreenBtn
-                title={props.demoBtn.title}
-                url={props.demoBtn.link}
-                target={props.demoBtn.target || "_self"}
-              />
+              // <GreenBtn
+              //   title={props.demoBtn.title}
+              //   url={props.demoBtn.link}
+              //   target={props.demoBtn.target || "_self"}
+              // />
+              <button className="block md:inline-block btn primary-green text-black font-medium text-sm px-5 py-2.5  text-center" onClick={handleNavClick}>SCHEDULE DEMO</button>
             )}
           </div>
           <div className="footerTopRight">
@@ -55,6 +68,13 @@ export const FooterTopSection = (props: footerTopData) => {
         </div>
       </div>
     </section>
+    {isModalVisible && (
+      <ContactPageClient
+        isModelShow={isModalVisible}
+        onClose={closeModal}
+      />
+    )}
+    </>
   );
 };
 
